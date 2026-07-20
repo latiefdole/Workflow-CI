@@ -27,7 +27,7 @@ groups:
                     type: and
                   query:
                     params:
-                      - B
+                      - A
                   reducer:
                     params: []
                     type: last
@@ -39,8 +39,9 @@ groups:
               expression: A
               intervalMs: 1000
               maxDataPoints: 43200
-              reducer: sum
-              type: reduce
+              type: classic_conditions
+        noDataState: OK
+        execErrState: Error
         for: 10s
         annotations:
           summary: "Terdapat lebih dari 0 request pada model. (Bukti Alerting Kriteria 4)"
