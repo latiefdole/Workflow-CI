@@ -24,7 +24,8 @@ print(f"Data loaded — Train: {X_train.shape}, Test: {X_test.shape}")
 # ── Training ──────────────────────────────────────────────────────────────────
 with mlflow.start_run(run_name='RF_CI_run') as run:
     # Save run ID to file for CI
-    with open('run_id.txt', 'w') as f:
+    output_path = os.path.join(os.environ.get('GITHUB_WORKSPACE', '.'), 'run_id.txt')
+    with open(output_path, 'w') as f:
         f.write(run.info.run_id)
 
     model = RandomForestClassifier(
