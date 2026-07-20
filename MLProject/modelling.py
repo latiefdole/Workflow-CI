@@ -22,7 +22,11 @@ y_test  = pd.read_csv(f'{PREP}/y_test.csv').squeeze().values
 print(f"Data loaded — Train: {X_train.shape}, Test: {X_test.shape}")
 
 # ── Training ──────────────────────────────────────────────────────────────────
-with mlflow.start_run(run_name='RF_CI_run'):
+with mlflow.start_run(run_name='RF_CI_run') as run:
+    # Save run ID to file for CI
+    with open('run_id.txt', 'w') as f:
+        f.write(run.info.run_id)
+
     model = RandomForestClassifier(
         n_estimators=100,
         max_depth=10,
