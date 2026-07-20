@@ -1,0 +1,4 @@
+Docker Hub Image:
+https://hub.docker.com/r/latiefdole/wine-quality-model
+
+[GANTI URL INI SETELAH DOCKER HUB IMAGE DI-PUSH]
