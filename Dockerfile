@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.12.7-slim
 
 WORKDIR /app
 
@@ -26,4 +26,4 @@ EXPOSE 8080
 ENV MLFLOW_TRACKING_URI=""
 
 # Jalankan mlflow serve
-CMD ["mlflow", "models", "serve", "-m", "/app/model", "-h", "0.0.0.0", "-p", "8080", "--enable-mlserver"]
+CMD ["mlflow", "models", "serve", "-m", "/app/model", "-h", "0.0.0.0", "-p", "8080", "--enable-mlserver", "--env-manager", "local"]
