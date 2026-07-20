@@ -18,6 +18,9 @@ RUN pip install --no-cache-dir \
     mlserver \
     mlserver-mlflow
 
+# Uninstall uvloop to prevent multiprocessing event loop bugs in Python
+RUN pip uninstall -y uvloop
+
 # Copy model yang sudah di-download oleh CI
 COPY model_artifact/model /app/model
 
