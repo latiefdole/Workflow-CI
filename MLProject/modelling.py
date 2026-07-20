@@ -43,8 +43,10 @@ with mlflow.start_run(run_name='RF_CI_run') as run:
     mlflow.log_metric('test_precision', precision_score(y_test, y_pred))
     mlflow.log_metric('test_recall',    recall_score(y_test, y_pred))
     
-    # Log model manually
-    mlflow.sklearn.log_model(model, 'model')
+    # Log model manually with explicitly defined conda_env to fix python 3.9 Docker bug
+    import os
+    conda_env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'conda.yaml')
+    mlflow.sklearn.log_model(model, 'model', conda_env=conda_env_path)
 
     print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
     print(f"F1 Score: {f1_score(y_test, y_pred):.4f}")
