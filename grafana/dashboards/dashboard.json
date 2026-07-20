@@ -1,0 +1,72 @@
+{
+  "title": "MLflow Model Monitoring (Dicoding K4)",
+  "timezone": "browser",
+  "refresh": "5s",
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "Total Requests Over Time",
+      "gridPos": { "h": 9, "w": 12, "x": 0, "y": 0 },
+      "targets": [
+        {
+          "expr": "sum(rate(seldon_api_executor_server_requests_seconds_count[1m])) or sum(rate(http_requests_total[1m])) or sum(rate(scrape_samples_scraped[1m]))",
+          "refId": "A",
+          "legendFormat": "Requests / Sec"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "drawStyle": "line",
+            "lineInterpolation": "smooth",
+            "lineWidth": 2,
+            "fillOpacity": 20
+          }
+        }
+      }
+    },
+    {
+      "type": "stat",
+      "title": "Model Status",
+      "gridPos": { "h": 9, "w": 6, "x": 12, "y": 0 },
+      "targets": [
+        {
+          "expr": "up{job=\"mlflow_model\"}",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "1": { "text": "ONLINE", "color": "green" },
+                "0": { "text": "OFFLINE", "color": "red" }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "timeseries",
+      "title": "Python GC Collections (System Metric)",
+      "gridPos": { "h": 9, "w": 12, "x": 0, "y": 9 },
+      "targets": [
+        {
+          "expr": "rate(python_gc_collections_total[1m])",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "drawStyle": "bars",
+            "fillOpacity": 80
+          }
+        }
+      }
+    }
+  ]
+}
