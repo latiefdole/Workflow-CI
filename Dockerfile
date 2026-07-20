@@ -30,6 +30,7 @@ EXPOSE 8080
 # Environment variables
 ENV MLFLOW_TRACKING_URI=""
 ENV MLSERVER_PARALLEL_WORKERS=0
+ENV MLSERVER_METRICS_ENDPOINT="0.0.0.0:8082"
 
 # Jalankan mlflow serve
 CMD ["mlflow", "models", "serve", "-m", "/app/model", "-h", "0.0.0.0", "-p", "8080", "--enable-mlserver", "--env-manager", "local"]
