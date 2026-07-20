@@ -1,0 +1,1481 @@
+train-and-deploy	Set up job	﻿2026-07-20T10:12:23.4544447Z Current runner version: '2.335.1'
+train-and-deploy	Set up job	2026-07-20T10:12:23.4571485Z ##[group]Runner Image Provisioner
+train-and-deploy	Set up job	2026-07-20T10:12:23.4572836Z Hosted Compute Agent
+train-and-deploy	Set up job	2026-07-20T10:12:23.4573622Z Version: 20260707.563
+train-and-deploy	Set up job	2026-07-20T10:12:23.4574302Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+train-and-deploy	Set up job	2026-07-20T10:12:23.4575176Z Build Date: 2026-07-07T19:33:50Z
+train-and-deploy	Set up job	2026-07-20T10:12:23.4575962Z Worker ID: {4d30f493-d240-4758-b8c9-2a5d48fb7a3b}
+train-and-deploy	Set up job	2026-07-20T10:12:23.4576816Z Azure Region: westus
+train-and-deploy	Set up job	2026-07-20T10:12:23.4577481Z ##[endgroup]
+train-and-deploy	Set up job	2026-07-20T10:12:23.4579004Z ##[group]Operating System
+train-and-deploy	Set up job	2026-07-20T10:12:23.4579860Z Ubuntu
+train-and-deploy	Set up job	2026-07-20T10:12:23.4580442Z 24.04.4
+train-and-deploy	Set up job	2026-07-20T10:12:23.4581046Z LTS
+train-and-deploy	Set up job	2026-07-20T10:12:23.4581645Z ##[endgroup]
+train-and-deploy	Set up job	2026-07-20T10:12:23.4582926Z ##[group]Runner Image
+train-and-deploy	Set up job	2026-07-20T10:12:23.4583686Z Image: ubuntu-24.04
+train-and-deploy	Set up job	2026-07-20T10:12:23.4584353Z Version: 20260714.240.1
+train-and-deploy	Set up job	2026-07-20T10:12:23.4585618Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260714.240/images/ubuntu/Ubuntu2404-Readme.md
+train-and-deploy	Set up job	2026-07-20T10:12:23.4587467Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260714.240
+train-and-deploy	Set up job	2026-07-20T10:12:23.4588557Z ##[endgroup]
+train-and-deploy	Set up job	2026-07-20T10:12:23.4589870Z ##[group]GITHUB_TOKEN Permissions
+train-and-deploy	Set up job	2026-07-20T10:12:23.4592062Z Contents: read
+train-and-deploy	Set up job	2026-07-20T10:12:23.4593090Z Metadata: read
+train-and-deploy	Set up job	2026-07-20T10:12:23.4593763Z Packages: read
+train-and-deploy	Set up job	2026-07-20T10:12:23.4594359Z ##[endgroup]
+train-and-deploy	Set up job	2026-07-20T10:12:23.4596597Z Secret source: Actions
+train-and-deploy	Set up job	2026-07-20T10:12:23.4597457Z Prepare workflow directory
+train-and-deploy	Set up job	2026-07-20T10:12:23.5145452Z Prepare all required actions
+train-and-deploy	Set up job	2026-07-20T10:12:23.5183397Z Getting action download info
+train-and-deploy	Set up job	2026-07-20T10:12:23.8713617Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+train-and-deploy	Set up job	2026-07-20T10:12:24.0063443Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+train-and-deploy	Set up job	2026-07-20T10:12:24.1177380Z Download action repository 'docker/setup-buildx-action@v3' (SHA:8d2750c68a42422c14e847fe6c8ac0403b4cbd6f)
+train-and-deploy	Set up job	2026-07-20T10:12:24.6725120Z Download action repository 'docker/login-action@v3' (SHA:c94ce9fb468520275223c153574b00df6fe4bcc9)
+train-and-deploy	Set up job	2026-07-20T10:12:25.3893172Z Complete job name: train-and-deploy
+train-and-deploy	Checkout repository	﻿2026-07-20T10:12:25.4815948Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4827847Z ##[group]Run actions/checkout@v4
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4829486Z with:
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4830684Z   repository: ***/Workflow-CI
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4841268Z   token: ***
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4842502Z   ssh-strict: true
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4843766Z   ssh-user: git
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4844940Z   persist-credentials: true
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4846128Z   clean: true
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4847312Z   sparse-checkout-cone-mode: true
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4848707Z   fetch-depth: 1
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4849903Z   fetch-tags: false
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4851025Z   show-progress: true
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4852159Z   lfs: false
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4853469Z   submodules: false
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4854788Z   set-safe-directory: true
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4856324Z env:
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4857863Z   MLFLOW_TRACKING_URI: ***
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4859319Z   MLFLOW_TRACKING_USERNAME: ***
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4860931Z   MLFLOW_TRACKING_PASSWORD: ***
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.4862557Z ##[endgroup]
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.5890762Z Syncing repository: ***/Workflow-CI
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.5894417Z ##[group]Getting Git version info
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.5896131Z Working directory is '/home/runner/work/Workflow-CI/Workflow-CI'
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.5898630Z [command]/usr/bin/git version
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.5986375Z git version 2.54.0
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6017118Z ##[endgroup]
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6031744Z Temporarily overriding HOME='/home/runner/work/_temp/37a6ca75-ec13-48fe-b8c2-f51515ba1bff' before making global git config changes
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6038256Z Adding repository directory to the temporary git global config as a safe directory
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6043179Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Workflow-CI/Workflow-CI
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6099870Z Deleting the contents of '/home/runner/work/Workflow-CI/Workflow-CI'
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6105276Z ##[group]Initializing the repository
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6110485Z [command]/usr/bin/git init /home/runner/work/Workflow-CI/Workflow-CI
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6253699Z hint: Using 'master' as the name for the initial branch. This default branch name
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6257312Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6261276Z hint: to use in all of your new repositories, which will suppress this warning,
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6264990Z hint: call:
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6267194Z hint:
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6269448Z hint: 	git config --global init.defaultBranch <name>
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6272256Z hint:
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6274824Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6278675Z hint: 'development'. The just-created branch can be renamed via this command:
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6282124Z hint:
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6284529Z hint: 	git branch -m <name>
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6286877Z hint:
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6292074Z hint: Disable this message with "git config set advice.defaultBranchName false"
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6297212Z Initialized empty Git repository in /home/runner/work/Workflow-CI/Workflow-CI/.git/
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6305643Z [command]/usr/bin/git remote add origin https://github.com/***/Workflow-CI
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6341044Z ##[endgroup]
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6344346Z ##[group]Disabling automatic garbage collection
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6346786Z [command]/usr/bin/git config --local gc.auto 0
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6377884Z ##[endgroup]
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6380635Z ##[group]Setting up auth
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6383883Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6421889Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6819170Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.6857605Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.7094383Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.7131820Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.7362988Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.7403369Z ##[endgroup]
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.7405379Z ##[group]Fetching the repository
+train-and-deploy	Checkout repository	2026-07-20T10:12:25.7415035Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +8114761a186dc9b6a76ed8edce94eaffe963ee8f:refs/remotes/origin/main
+train-and-deploy	Checkout repository	2026-07-20T10:12:26.1828566Z From https://github.com/***/Workflow-CI
+train-and-deploy	Checkout repository	2026-07-20T10:12:26.1831496Z  * [new ref]         8114761a186dc9b6a76ed8edce94eaffe963ee8f -> origin/main
+train-and-deploy	Checkout repository	2026-07-20T10:12:26.1865501Z ##[endgroup]
+train-and-deploy	Checkout repository	2026-07-20T10:12:26.1866907Z ##[group]Determining the checkout info
+train-and-deploy	Checkout repository	2026-07-20T10:12:26.1868974Z ##[endgroup]
+train-and-deploy	Checkout repository	2026-07-20T10:12:26.1875568Z [command]/usr/bin/git sparse-checkout disable
+train-and-deploy	Checkout repository	2026-07-20T10:12:26.1925979Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+train-and-deploy	Checkout repository	2026-07-20T10:12:26.1956281Z ##[group]Checking out the ref
+train-and-deploy	Checkout repository	2026-07-20T10:12:26.1962566Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+train-and-deploy	Checkout repository	2026-07-20T10:12:26.2041381Z Switched to a new branch 'main'
+train-and-deploy	Checkout repository	2026-07-20T10:12:26.2044996Z branch 'main' set up to track 'origin/main'.
+train-and-deploy	Checkout repository	2026-07-20T10:12:26.2050491Z ##[endgroup]
+train-and-deploy	Checkout repository	2026-07-20T10:12:26.2189521Z [command]/usr/bin/git log -1 --format=%H
+train-and-deploy	Checkout repository	2026-07-20T10:12:26.2190578Z 8114761a186dc9b6a76ed8edce94eaffe963ee8f
+train-and-deploy	Set up Python 3.10.15	﻿2026-07-20T10:12:26.2402496Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.2404358Z ##[group]Run actions/setup-python@v5
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.2404716Z with:
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.2404992Z   python-version: 3.10.15
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.2405306Z   check-latest: false
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.2408091Z   token: ***
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.2408388Z   update-environment: true
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.2408716Z   allow-prereleases: false
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.2409049Z   freethreaded: false
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.2409333Z env:
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.2409734Z   MLFLOW_TRACKING_URI: ***
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.2410072Z   MLFLOW_TRACKING_USERNAME: ***
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.2410494Z   MLFLOW_TRACKING_PASSWORD: ***
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.2410862Z ##[endgroup]
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.3751693Z ##[group]Installed versions
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.3775725Z Version 3.10.15 was not found in the local cache
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.3887670Z (node:2334) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:26.3888698Z (Use `node --trace-deprecation ...` to show where the warning was created)
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:27.1450846Z Version 3.10.15 is available for downloading
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:27.1453095Z Download from "https://github.com/actions/python-versions/releases/download/3.10.15-10765692022/python-3.10.15-linux-24.04-x64.tar.gz"
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:28.3860067Z Extract downloaded archive
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:28.3999862Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/0767bda3-9d15-457c-99b0-9cefde1e5672 -f /home/runner/work/_temp/05a47b28-c170-49ab-b9f4-4f3769b3f399
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:29.8403274Z Execute installation script
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:29.8517967Z Check if Python hostedtoolcache folder exist...
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:29.8518912Z Create Python 3.10.15 folder
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:29.8531410Z Copy Python binaries to hostedtoolcache folder
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:30.3058273Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:30.3099515Z Upgrading pip...
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:32.4893845Z Looking in links: /tmp/tmp_4rir887
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:32.4897691Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.10.15/x64/lib/python3.10/site-packages (65.5.0)
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:32.4902096Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.15/x64/lib/python3.10/site-packages (23.0.1)
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:33.7464851Z Collecting pip
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:33.7760779Z Downloading pip-26.1.2-py3-none-any.whl (1.8 MB)
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:33.8127962Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 52.9 MB/s eta 0:00:00
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:33.8128757Z 
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:33.8635861Z Installing collected packages: pip
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:33.8636842Z Attempting uninstall: pip
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:33.8645352Z Found existing installation: pip 23.0.1
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:34.0440436Z Uninstalling pip-23.0.1:
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:34.0513020Z Successfully uninstalled pip-23.0.1
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:34.8755201Z Successfully installed pip-26.1.2
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:34.9365826Z Create complete file
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:34.9409938Z Successfully set up CPython (3.10.15)
+train-and-deploy	Set up Python 3.10.15	2026-07-20T10:12:34.9411103Z ##[endgroup]
+train-and-deploy	Install dependencies	﻿2026-07-20T10:12:34.9631708Z ##[group]Run pip install mlflow==2.19.0 scikit-learn pandas numpy matplotlib dagshub
+train-and-deploy	Install dependencies	2026-07-20T10:12:34.9632835Z [36;1mpip install mlflow==2.19.0 scikit-learn pandas numpy matplotlib dagshub[0m
+train-and-deploy	Install dependencies	2026-07-20T10:12:34.9721080Z shell: /usr/bin/bash -e {0}
+train-and-deploy	Install dependencies	2026-07-20T10:12:34.9721673Z env:
+train-and-deploy	Install dependencies	2026-07-20T10:12:34.9722731Z   MLFLOW_TRACKING_URI: ***
+train-and-deploy	Install dependencies	2026-07-20T10:12:34.9723117Z   MLFLOW_TRACKING_USERNAME: ***
+train-and-deploy	Install dependencies	2026-07-20T10:12:34.9723511Z   MLFLOW_TRACKING_PASSWORD: ***
+train-and-deploy	Install dependencies	2026-07-20T10:12:34.9723900Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Install dependencies	2026-07-20T10:12:34.9724396Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.15/x64/lib/pkgconfig
+train-and-deploy	Install dependencies	2026-07-20T10:12:34.9724867Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Install dependencies	2026-07-20T10:12:34.9725287Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Install dependencies	2026-07-20T10:12:34.9725712Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Install dependencies	2026-07-20T10:12:34.9726133Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.15/x64/lib
+train-and-deploy	Install dependencies	2026-07-20T10:12:34.9726538Z ##[endgroup]
+train-and-deploy	Install dependencies	2026-07-20T10:12:35.5209368Z Collecting mlflow==2.19.0
+train-and-deploy	Install dependencies	2026-07-20T10:12:35.6887169Z   Downloading mlflow-2.19.0-py3-none-any.whl.metadata (30 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:35.8270924Z Collecting scikit-learn
+train-and-deploy	Install dependencies	2026-07-20T10:12:35.8706179Z   Downloading scikit_learn-1.7.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:36.0222222Z Collecting pandas
+train-and-deploy	Install dependencies	2026-07-20T10:12:36.0656713Z   Downloading pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:36.3893044Z Collecting numpy
+train-and-deploy	Install dependencies	2026-07-20T10:12:36.4327989Z   Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:36.6091032Z Collecting matplotlib
+train-and-deploy	Install dependencies	2026-07-20T10:12:36.6528698Z   Downloading matplotlib-3.10.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (52 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:36.6931720Z Collecting dagshub
+train-and-deploy	Install dependencies	2026-07-20T10:12:36.7366936Z   Downloading dagshub-0.7.1-py3-none-any.whl.metadata (12 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:36.7658038Z Collecting mlflow-skinny==2.19.0 (from mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:36.8109455Z   Downloading mlflow_skinny-2.19.0-py3-none-any.whl.metadata (31 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:36.8416767Z Collecting Flask<4 (from mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:36.8852200Z   Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:36.9025858Z Collecting Jinja2<4,>=2.11 (from mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:36.9459205Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:36.9745390Z Collecting alembic!=1.10.0,<2 (from mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:37.0183691Z   Downloading alembic-1.18.5-py3-none-any.whl.metadata (7.2 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:37.0378632Z Collecting docker<8,>=4.0.0 (from mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:37.0816008Z   Downloading docker-7.2.0-py3-none-any.whl.metadata (3.8 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:37.1025963Z Collecting graphene<4 (from mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:37.1457475Z   Downloading graphene-3.4.3-py2.py3-none-any.whl.metadata (6.9 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:37.1685678Z Collecting gunicorn<24 (from mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:37.2123573Z   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:37.2348509Z Collecting markdown<4,>=3.3 (from mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:37.2789622Z   Downloading markdown-3.10.2-py3-none-any.whl.metadata (5.1 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:37.3941180Z Collecting pyarrow<19,>=4.0.0 (from mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:37.4388858Z   Downloading pyarrow-18.1.0-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:37.6099384Z Collecting scipy<2 (from mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:37.6537659Z   Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.0070866Z Collecting sqlalchemy<3,>=1.4.0 (from mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.0509869Z   Downloading sqlalchemy-2.0.51-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.0802719Z Collecting cachetools<6,>=5.0.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.1238488Z   Downloading cachetools-5.5.2-py3-none-any.whl.metadata (5.4 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.1417407Z Collecting click<9,>=7.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.1859359Z   Downloading click-8.4.2-py3-none-any.whl.metadata (2.6 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.2046007Z Collecting cloudpickle<4 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.2484186Z   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.2831277Z Collecting databricks-sdk<1,>=0.20.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.3267943Z   Downloading databricks_sdk-0.121.0-py3-none-any.whl.metadata (44 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.3574449Z Collecting gitpython<4,>=3.1.9 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.4008503Z   Downloading gitpython-3.1.52-py3-none-any.whl.metadata (14 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.4337958Z Collecting importlib_metadata!=4.7.0,<9,>=3.7.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.4771088Z   Downloading importlib_metadata-8.9.0-py3-none-any.whl.metadata (4.5 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.5393434Z Collecting opentelemetry-api<3,>=1.9.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.5835323Z   Downloading opentelemetry_api-1.44.0-py3-none-any.whl.metadata (1.4 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.6208146Z Collecting opentelemetry-sdk<3,>=1.9.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.6647440Z   Downloading opentelemetry_sdk-1.44.0-py3-none-any.whl.metadata (1.6 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.7593606Z Collecting packaging<25 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:38.8028607Z   Downloading packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.0313594Z Collecting protobuf<6,>=3.12.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.0754183Z   Downloading protobuf-5.29.6-cp38-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.1979078Z Collecting pyyaml<7,>=5.1 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.2413313Z   Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.2662759Z Collecting requests<3,>=2.17.3 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.3097935Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.3245883Z Collecting sqlparse<1,>=0.4.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.3675218Z   Downloading sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.3965241Z Collecting joblib>=1.2.0 (from scikit-learn)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.4395399Z   Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.4501226Z Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.4932733Z   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.5106776Z Collecting python-dateutil>=2.8.2 (from pandas)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.5543909Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.5980679Z Collecting pytz>=2020.1 (from pandas)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.6411315Z   Downloading pytz-2026.2-py2.py3-none-any.whl.metadata (22 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.6583815Z Collecting tzdata>=2022.7 (from pandas)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.7017581Z   Downloading tzdata-2026.3-py2.py3-none-any.whl.metadata (1.4 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.7799368Z Collecting contourpy>=1.0.1 (from matplotlib)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.8238078Z   Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.8372597Z Collecting cycler>=0.10 (from matplotlib)
+train-and-deploy	Install dependencies	2026-07-20T10:12:39.8809143Z   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.0846775Z Collecting fonttools>=4.22.0 (from matplotlib)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.1286627Z   Downloading fonttools-4.63.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.2281828Z Collecting kiwisolver>=1.3.1 (from matplotlib)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.2716813Z   Downloading kiwisolver-1.5.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (5.1 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.4836239Z Collecting pillow>=8 (from matplotlib)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.5271992Z   Downloading pillow-12.3.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.5581097Z Collecting pyparsing>=3 (from matplotlib)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.6019253Z   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.6370544Z Collecting Mako (from alembic!=1.10.0,<2->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.6800776Z   Downloading mako-1.3.12-py3-none-any.whl.metadata (2.9 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.6967441Z Collecting typing-extensions>=4.12 (from alembic!=1.10.0,<2->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.7406691Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.7685002Z Collecting tomli (from alembic!=1.10.0,<2->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.8121767Z   Downloading tomli-2.4.1-py3-none-any.whl.metadata (10 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.8623552Z Collecting google-auth~=2.0 (from databricks-sdk<1,>=0.20.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.9062942Z   Downloading google_auth-2.56.0-py3-none-any.whl.metadata (6.0 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.9507041Z Collecting urllib3<3,>=1.26 (from databricks-sdk<1,>=0.20.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:40.9943525Z   Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.0122188Z Collecting blinker>=1.9.0 (from Flask<4->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.0570944Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.0717174Z Collecting itsdangerous>=2.2.0 (from Flask<4->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.1150693Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.2072027Z Collecting markupsafe>=2.1.1 (from Flask<4->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.2507185Z   Downloading markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.2717216Z Collecting werkzeug>=3.1.0 (from Flask<4->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.3151228Z   Downloading werkzeug-3.1.8-py3-none-any.whl.metadata (4.0 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.3295489Z Collecting gitdb<5,>=4.0.1 (from gitpython<4,>=3.1.9->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.3733061Z   Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.3858171Z Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython<4,>=3.1.9->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.4294351Z   Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.4510764Z Collecting pyasn1-modules>=0.2.1 (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.4945396Z   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.7121055Z Collecting cryptography>=38.0.3 (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.7563653Z   Downloading cryptography-49.0.0-cp39-abi3-manylinux_2_34_x86_64.whl.metadata (4.3 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.7819860Z Collecting graphql-core<3.3,>=3.1 (from graphene<4->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.8259675Z   Downloading graphql_core-3.2.11-py3-none-any.whl.metadata (11 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.8402186Z Collecting graphql-relay<3.3,>=3.1 (from graphene<4->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.8835289Z   Downloading graphql_relay-3.2.0-py3-none-any.whl.metadata (12 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.9117062Z Collecting zipp>=3.20 (from importlib_metadata!=4.7.0,<9,>=3.7.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.9550902Z   Downloading zipp-4.1.0-py3-none-any.whl.metadata (3.6 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:41.9843971Z Collecting opentelemetry-semantic-conventions==0.65b0 (from opentelemetry-sdk<3,>=1.9.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.0275828Z   Downloading opentelemetry_semantic_conventions-0.65b0-py3-none-any.whl.metadata (2.4 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.0451088Z Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.0889847Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.2203946Z Collecting charset_normalizer<4,>=2 (from requests<3,>=2.17.3->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.2639577Z   Downloading charset_normalizer-3.4.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.2827805Z Collecting idna<4,>=2.5 (from requests<3,>=2.17.3->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.3269596Z   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.3480722Z Collecting certifi>=2023.5.7 (from requests<3,>=2.17.3->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.3924262Z   Downloading certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.6162604Z Collecting greenlet>=1 (from sqlalchemy<3,>=1.4.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.6596728Z   Downloading greenlet-3.5.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.6773787Z Collecting appdirs>=1.4.4 (from dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.7208396Z   Downloading appdirs-1.4.4-py2.py3-none-any.whl.metadata (9.0 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.7415881Z Collecting httpx>=0.23.0 (from dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.7857635Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.8259806Z Collecting rich>=13.1.0 (from dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.8699341Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.8876163Z Collecting dacite~=1.6.0 (from dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.9324681Z   Downloading dacite-1.6.0-py3-none-any.whl.metadata (14 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.9496309Z Collecting tenacity>=8.2.2 (from dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:42.9930461Z   Downloading tenacity-9.1.4-py3-none-any.whl.metadata (1.2 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:43.0103071Z Collecting gql[requests] (from dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:43.0541447Z   Downloading gql-4.0.0-py3-none-any.whl.metadata (10 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:43.0939438Z Collecting dataclasses-json (from dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:43.1375718Z   Downloading dataclasses_json-0.6.7-py3-none-any.whl.metadata (25 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:43.1512006Z Collecting treelib>=1.6.4 (from dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:43.1955087Z   Downloading treelib-1.8.0-py3-none-any.whl.metadata (3.3 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:43.2169723Z Collecting pathvalidate>=3.0.0 (from dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:43.2605181Z   Downloading pathvalidate-3.3.1-py3-none-any.whl.metadata (12 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:43.6851327Z Collecting boto3 (from dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:43.7286985Z   Downloading boto3-1.43.51-py3-none-any.whl.metadata (6.6 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:43.8608500Z Collecting semver (from dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:43.9044339Z   Downloading semver-3.0.4-py3-none-any.whl.metadata (6.8 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:43.9178425Z Collecting dagshub-annotation-converter>=0.2.0 (from dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:43.9619506Z   Downloading dagshub_annotation_converter-0.2.0-py3-none-any.whl.metadata (4.6 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:44.0894438Z Collecting cffi>=2.0.0 (from cryptography>=38.0.3->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:44.1336467Z   Downloading cffi-2.1.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:44.1496953Z Collecting pycparser (from cffi>=2.0.0->cryptography>=38.0.3->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:44.1934719Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:44.4569916Z Collecting lxml (from dagshub-annotation-converter>=0.2.0->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:44.5005318Z   Downloading lxml-6.1.1-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.5 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:44.6874482Z Collecting pydantic>=2.0.0 (from dagshub-annotation-converter>=0.2.0->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:44.7312018Z   Downloading pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:44.7663471Z Collecting anyio (from httpx>=0.23.0->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:44.8105575Z   Downloading anyio-4.14.2-py3-none-any.whl.metadata (4.6 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:44.8288284Z Collecting httpcore==1.* (from httpx>=0.23.0->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:44.8724022Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:44.9046566Z Collecting h11>=0.16 (from httpcore==1.*->httpx>=0.23.0->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:44.9483713Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:44.9808217Z Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Install dependencies	2026-07-20T10:12:45.0247505Z   Downloading pyasn1-0.6.4-py3-none-any.whl.metadata (8.4 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:45.0395581Z Collecting annotated-types>=0.6.0 (from pydantic>=2.0.0->dagshub-annotation-converter>=0.2.0->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:45.0833479Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:45.9482844Z Collecting pydantic-core==2.46.4 (from pydantic>=2.0.0->dagshub-annotation-converter>=0.2.0->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:45.9920310Z   Downloading pydantic_core-2.46.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.0047091Z Collecting typing-inspection>=0.4.2 (from pydantic>=2.0.0->dagshub-annotation-converter>=0.2.0->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.0478990Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.0677774Z Collecting markdown-it-py>=2.2.0 (from rich>=13.1.0->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.1115031Z   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.1338038Z Collecting pygments<3.0.0,>=2.13.0 (from rich>=13.1.0->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.1772789Z   Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.1895810Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.1.0->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.2331489Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.2568778Z Collecting exceptiongroup>=1.0.2 (from anyio->httpx>=0.23.0->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.3003738Z   Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.6598082Z Collecting botocore<1.44.0,>=1.43.51 (from boto3->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.7033823Z   Downloading botocore-1.43.51-py3-none-any.whl.metadata (5.6 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.7165640Z Collecting jmespath<2.0.0,>=0.7.1 (from boto3->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.7598226Z   Downloading jmespath-1.1.0-py3-none-any.whl.metadata (7.6 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.7766844Z Collecting s3transfer<0.20.0,>=0.19.0 (from boto3->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.8206294Z   Downloading s3transfer-0.19.1-py3-none-any.whl.metadata (1.7 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.9056245Z Collecting marshmallow<4.0.0,>=3.18.0 (from dataclasses-json->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.9494648Z   Downloading marshmallow-3.26.2-py3-none-any.whl.metadata (7.3 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:46.9632885Z Collecting typing-inspect<1,>=0.4.0 (from dataclasses-json->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:47.0066155Z   Downloading typing_inspect-0.9.0-py3-none-any.whl.metadata (1.5 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:47.0224835Z Collecting mypy-extensions>=0.3.0 (from typing-inspect<1,>=0.4.0->dataclasses-json->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:47.0661719Z   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:47.3778449Z Collecting yarl<2.0,>=1.6 (from gql[requests]->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:47.4211563Z   Downloading yarl-1.24.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (103 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:47.4484265Z Collecting backoff<3.0,>=1.11.1 (from gql[requests]->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:47.4920335Z   Downloading backoff-2.2.1-py3-none-any.whl.metadata (14 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:47.5092202Z Collecting requests_toolbelt<2,>=1.0.0 (from gql[requests]->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:47.5527100Z   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:47.9411815Z Collecting multidict>=4.0 (from yarl<2.0,>=1.6->gql[requests]->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:47.9849837Z   Downloading multidict-6.7.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:48.0541157Z Collecting propcache>=0.2.1 (from yarl<2.0,>=1.6->gql[requests]->dagshub)
+train-and-deploy	Install dependencies	2026-07-20T10:12:48.0985010Z   Downloading propcache-0.5.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:48.1603287Z Downloading mlflow-2.19.0-py3-none-any.whl (27.4 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:48.6815218Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 27.4/27.4 MB 57.1 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:48.7279003Z Downloading mlflow_skinny-2.19.0-py3-none-any.whl (5.9 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:48.7487498Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.9/5.9 MB 308.3 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:48.7925444Z Downloading scikit_learn-1.7.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:48.8281191Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 288.7 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:48.8723407Z Downloading pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:48.9339236Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 213.1 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:48.9806453Z Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.0522680Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 235.5 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.0965614Z Downloading matplotlib-3.10.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.8 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.1298828Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 280.8 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.1735335Z Downloading alembic-1.18.5-py3-none-any.whl (264 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.2199392Z Downloading cachetools-5.5.2-py3-none-any.whl (10 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.2654693Z Downloading click-8.4.2-py3-none-any.whl (119 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.3111163Z Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.3569857Z Downloading databricks_sdk-0.121.0-py3-none-any.whl (958 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.3636522Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 958.8/958.8 kB 181.3 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.4072815Z Downloading docker-7.2.0-py3-none-any.whl (148 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.4540580Z Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.5011117Z Downloading gitpython-3.1.52-py3-none-any.whl (215 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.5477999Z Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.5940393Z Downloading google_auth-2.56.0-py3-none-any.whl (257 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.6406782Z Downloading graphene-3.4.3-py2.py3-none-any.whl (114 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.6869845Z Downloading graphql_core-3.2.11-py3-none-any.whl (214 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.7335359Z Downloading graphql_relay-3.2.0-py3-none-any.whl (16 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.7795160Z Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.8283514Z Downloading importlib_metadata-8.9.0-py3-none-any.whl (27 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.8737902Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.9200427Z Downloading markdown-3.10.2-py3-none-any.whl (108 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:49.9659523Z Downloading opentelemetry_api-1.44.0-py3-none-any.whl (60 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.0122228Z Downloading opentelemetry_sdk-1.44.0-py3-none-any.whl (137 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.0594245Z Downloading opentelemetry_semantic_conventions-0.65b0-py3-none-any.whl (204 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.1067600Z Downloading packaging-24.2-py3-none-any.whl (65 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.1537564Z Downloading protobuf-5.29.6-cp38-abi3-manylinux2014_x86_64.whl (320 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.2009744Z Downloading pyarrow-18.1.0-cp310-cp310-manylinux_2_28_x86_64.whl (40.1 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.4077607Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.1/40.1 MB 197.4 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.4514560Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.4985888Z Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.5050262Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 138.0 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.5483143Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.5942066Z Downloading charset_normalizer-3.4.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (223 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.6401217Z Downloading idna-3.18-py3-none-any.whl (65 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.6866666Z Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.8657269Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.7/37.7 MB 212.6 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.9092985Z Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.9551686Z Downloading sqlalchemy-2.0.51-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.2 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:50.9695989Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 267.6 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.0128583Z Downloading sqlparse-0.5.5-py3-none-any.whl (46 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.0593581Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.1056979Z Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.1532627Z Downloading dagshub-0.7.1-py3-none-any.whl (273 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.2008757Z Downloading dacite-1.6.0-py3-none-any.whl (12 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.2471930Z Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.2930025Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.3389731Z Downloading certifi-2026.6.17-py3-none-any.whl (133 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.3852130Z Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (325 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.4333976Z Downloading cryptography-49.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.4515136Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 304.0 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.4949085Z Downloading cffi-2.1.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (218 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.5408230Z Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.5865647Z Downloading dagshub_annotation_converter-0.2.0-py3-none-any.whl (68 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.6323924Z Downloading fonttools-4.63.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.9 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.6509795Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 293.2 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.6947323Z Downloading greenlet-3.5.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (615 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.7005792Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 615.7/615.7 kB 111.3 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.7443067Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.7905560Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.8367115Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.8831751Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.9292015Z Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.9763765Z Downloading kiwisolver-1.5.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:51.9854519Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 229.8 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.0289989Z Downloading markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.0749927Z Downloading pathvalidate-3.3.1-py3-none-any.whl (24 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.1233399Z Downloading pillow-12.3.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.1497140Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 282.3 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.1928021Z Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.2392964Z Downloading pyasn1-0.6.4-py3-none-any.whl (84 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.2859132Z Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.3331337Z Downloading pydantic_core-2.46.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.3454157Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 198.1 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.3891616Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.4347536Z Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.4814751Z Downloading pytz-2026.2-py2.py3-none-any.whl (510 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.5288306Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.5760126Z Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.5838873Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 196.5 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.6274980Z Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.6737742Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.7196485Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.7652630Z Downloading tenacity-9.1.4-py3-none-any.whl (28 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.8116223Z Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.8583640Z Downloading treelib-1.8.0-py3-none-any.whl (30 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.9044399Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.9500980Z Downloading tzdata-2026.3-py2.py3-none-any.whl (348 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:52.9970748Z Downloading werkzeug-3.1.8-py3-none-any.whl (226 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.0460691Z Downloading zipp-4.1.0-py3-none-any.whl (10 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.0912780Z Downloading anyio-4.14.2-py3-none-any.whl (125 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.1382542Z Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.1842491Z Downloading boto3-1.43.51-py3-none-any.whl (140 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.2313494Z Downloading botocore-1.43.51-py3-none-any.whl (15.4 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.3014675Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.4/15.4 MB 226.8 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.3444945Z Downloading jmespath-1.1.0-py3-none-any.whl (20 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.3905531Z Downloading s3transfer-0.19.1-py3-none-any.whl (90 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.4370435Z Downloading dataclasses_json-0.6.7-py3-none-any.whl (28 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.4846158Z Downloading marshmallow-3.26.2-py3-none-any.whl (50 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.5332100Z Downloading typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.5802628Z Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.6261402Z Downloading gql-4.0.0-py3-none-any.whl (89 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.6717557Z Downloading backoff-2.2.1-py3-none-any.whl (15 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.7179044Z Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.7638784Z Downloading yarl-1.24.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (110 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.8101865Z Downloading multidict-6.7.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (243 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.8562719Z Downloading propcache-0.5.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (60 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.9023647Z Downloading lxml-6.1.1-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.9239178Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 276.7 MB/s  0:00:00
+train-and-deploy	Install dependencies	2026-07-20T10:12:53.9674948Z Downloading mako-1.3.12-py3-none-any.whl (78 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:54.0139728Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:54.0603568Z Downloading semver-3.0.4-py3-none-any.whl (17 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:54.1066803Z Downloading tomli-2.4.1-py3-none-any.whl (14 kB)
+train-and-deploy	Install dependencies	2026-07-20T10:12:54.7233059Z Installing collected packages: pytz, appdirs, zipp, urllib3, tzdata, typing-extensions, tomli, threadpoolctl, tenacity, sqlparse, smmap, six, semver, pyyaml, pyparsing, pygments, pycparser, pyasn1, pyarrow, protobuf, propcache, pillow, pathvalidate, packaging, numpy, mypy-extensions, mdurl, markupsafe, markdown, lxml, kiwisolver, joblib, jmespath, itsdangerous, idna, h11, greenlet, graphql-core, fonttools, dacite, cycler, cloudpickle, click, charset_normalizer, certifi, cachetools, blinker, backoff, annotated-types, werkzeug, typing-inspection, typing-inspect, treelib, sqlalchemy, scipy, requests, python-dateutil, pydantic-core, pyasn1-modules, opentelemetry-api, multidict, marshmallow, markdown-it-py, Mako, Jinja2, importlib_metadata, httpcore, gunicorn, graphql-relay, gitdb, exceptiongroup, contourpy, cffi, yarl, scikit-learn, rich, requests_toolbelt, pydantic, pandas, opentelemetry-semantic-conventions, matplotlib, graphene, gitpython, Flask, docker, dataclasses-json, cryptography, botocore, anyio, alembic, s3transfer, opentelemetry-sdk, httpx, gql, google-auth, dagshub-annotation-converter, databricks-sdk, boto3, mlflow-skinny, dagshub, mlflow
+train-and-deploy	Install dependencies	2026-07-20T10:13:20.0990003Z 
+train-and-deploy	Install dependencies	2026-07-20T10:13:20.1126759Z Successfully installed Flask-3.1.3 Jinja2-3.1.6 Mako-1.3.12 alembic-1.18.5 annotated-types-0.7.0 anyio-4.14.2 appdirs-1.4.4 backoff-2.2.1 blinker-1.9.0 boto3-1.43.51 botocore-1.43.51 cachetools-5.5.2 certifi-2026.6.17 cffi-2.1.0 charset_normalizer-3.4.9 click-8.4.2 cloudpickle-3.1.2 contourpy-1.3.2 cryptography-49.0.0 cycler-0.12.1 dacite-1.6.0 dagshub-0.7.1 dagshub-annotation-converter-0.2.0 databricks-sdk-0.121.0 dataclasses-json-0.6.7 docker-7.2.0 exceptiongroup-1.3.1 fonttools-4.63.0 gitdb-4.0.12 gitpython-3.1.52 google-auth-2.56.0 gql-4.0.0 graphene-3.4.3 graphql-core-3.2.11 graphql-relay-3.2.0 greenlet-3.5.3 gunicorn-23.0.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.18 importlib_metadata-8.9.0 itsdangerous-2.2.0 jmespath-1.1.0 joblib-1.5.3 kiwisolver-1.5.0 lxml-6.1.1 markdown-3.10.2 markdown-it-py-4.2.0 markupsafe-3.0.3 marshmallow-3.26.2 matplotlib-3.10.9 mdurl-0.1.2 mlflow-2.19.0 mlflow-skinny-2.19.0 multidict-6.7.1 mypy-extensions-1.1.0 numpy-2.2.6 opentelemetry-api-1.44.0 opentelemetry-sdk-1.44.0 opentelemetry-semantic-conventions-0.65b0 packaging-24.2 pandas-2.3.3 pathvalidate-3.3.1 pillow-12.3.0 propcache-0.5.2 protobuf-5.29.6 pyarrow-18.1.0 pyasn1-0.6.4 pyasn1-modules-0.4.2 pycparser-3.0 pydantic-2.13.4 pydantic-core-2.46.4 pygments-2.20.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 pytz-2026.2 pyyaml-6.0.3 requests-2.34.2 requests_toolbelt-1.0.0 rich-15.0.0 s3transfer-0.19.1 scikit-learn-1.7.2 scipy-1.15.3 semver-3.0.4 six-1.17.0 smmap-5.0.3 sqlalchemy-2.0.51 sqlparse-0.5.5 tenacity-9.1.4 threadpoolctl-3.6.0 tomli-2.4.1 treelib-1.8.0 typing-extensions-4.16.0 typing-inspect-0.9.0 typing-inspection-0.4.2 tzdata-2026.3 urllib3-2.7.0 werkzeug-3.1.8 yarl-1.24.5 zipp-4.1.0
+train-and-deploy	Run MLflow Project	﻿2026-07-20T10:13:20.5460523Z ##[group]Run mlflow run MLProject/ --env-manager local
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:20.5460983Z [36;1mmlflow run MLProject/ --env-manager local[0m
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:20.5520509Z shell: /usr/bin/bash -e {0}
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:20.5520780Z env:
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:20.5521223Z   MLFLOW_TRACKING_URI: ***
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:20.5521706Z   MLFLOW_TRACKING_USERNAME: ***
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:20.5522073Z   MLFLOW_TRACKING_PASSWORD: ***
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:20.5522698Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:20.5523147Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.15/x64/lib/pkgconfig
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:20.5523580Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:20.5523982Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:20.5524381Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:20.5524774Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.15/x64/lib
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:20.5525112Z ##[endgroup]
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:23.2726157Z 2026/07/20 10:13:23 INFO mlflow.projects.utils: === Created directory /tmp/tmp35e5lqfw for downloading remote URIs passed to arguments of type 'path' ===
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:23.2728206Z 2026/07/20 10:13:23 INFO mlflow.projects.backend.local: === Running command 'python modelling.py' in run with ID '16ad431876eb4050bd451557f0a6ddc2' === 
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:27.2042000Z [31m2026/07/20 10:13:27 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.[0m
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:28.5468940Z Data loaded — Train: (1279, 11), Test: (320, 11)
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:28.5469595Z Accuracy: 0.9375
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:28.5469959Z F1 Score: 0.7222
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:28.5470376Z ✅ Training selesai!
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:28.5471791Z 🏃 View run stately-elk-607 at: ***/#/experiments/0/runs/16ad431876eb4050bd451557f0a6ddc2
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:28.5473475Z 🧪 View experiment at: ***/#/experiments/0
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:28.9454542Z 2026/07/20 10:13:28 INFO mlflow.projects: === Run (ID '16ad431876eb4050bd451557f0a6ddc2') succeeded ===
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:29.2759783Z 🏃 View run stately-elk-607 at: ***/#/experiments/0/runs/16ad431876eb4050bd451557f0a6ddc2
+train-and-deploy	Run MLflow Project	2026-07-20T10:13:29.2761338Z 🧪 View experiment at: ***/#/experiments/0
+train-and-deploy	Set up Docker Buildx	﻿2026-07-20T10:13:29.5897381Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5898755Z ##[group]Run docker/setup-buildx-action@v3
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5899055Z with:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5899273Z   driver: docker-container
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5899524Z   use: true
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5899730Z   keep-state: false
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5899955Z   cache-binary: true
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5900180Z   cleanup: true
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5900398Z   install: false
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5900604Z env:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5901038Z   MLFLOW_TRACKING_URI: ***
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5901358Z   MLFLOW_TRACKING_USERNAME: ***
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5901722Z   MLFLOW_TRACKING_PASSWORD: ***
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5902049Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5902899Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.15/x64/lib/pkgconfig
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5903350Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5903765Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5904167Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5904571Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.15/x64/lib
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.5904916Z ##[endgroup]
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.8509236Z (node:2505) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.8510798Z (Use `node --trace-deprecation ...` to show where the warning was created)
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.8623633Z ##[group]Docker info
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.8650638Z [command]/usr/bin/docker version
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9721420Z Client: Docker Engine - Community
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9724240Z  Version:           28.0.4
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9724728Z  API version:       1.48
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9725574Z  Go version:        go1.23.7
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9725851Z  Git commit:        b8034c0
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9726132Z  Built:             Tue Mar 25 15:07:16 2025
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9726436Z  OS/Arch:           linux/amd64
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9726696Z  Context:           default
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9726858Z 
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9726972Z Server: Docker Engine - Community
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9727245Z  Engine:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9727451Z   Version:          28.0.4
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9727724Z   API version:      1.48 (minimum version 1.24)
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9728033Z   Go version:       go1.23.7
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9728292Z   Git commit:       6430e49
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9728547Z   Built:            Tue Mar 25 15:07:16 2025
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9728834Z   OS/Arch:          linux/amd64
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9729304Z   Experimental:     false
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9729577Z  containerd:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9729794Z   Version:          v2.2.6
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9730156Z   GitCommit:        11ce9d5f3c68c941867e82890e93e815c1304f1b
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9730562Z  runc:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9730780Z   Version:          1.3.6
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9731029Z   GitCommit:        v1.3.6-0-g491b69ba
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9731360Z  docker-init:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9731587Z   Version:          0.19.0
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9731874Z   GitCommit:        de40ad0
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:29.9776091Z [command]/usr/bin/docker info
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5281113Z Client: Docker Engine - Community
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5281995Z  Version:    28.0.4
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5284245Z  Context:    default
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5284667Z  Debug Mode: false
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5285024Z  Plugins:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5285395Z   buildx: Docker Buildx (Docker Inc.)
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5285847Z     Version:  v0.35.0
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5286300Z     Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5286860Z   compose: Docker Compose (Docker Inc.)
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5287301Z     Version:  v2.38.2
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5288233Z     Path:     /usr/libexec/docker/cli-plugins/docker-compose
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5288619Z 
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5288752Z Server:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5289048Z  Containers: 0
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5289373Z   Running: 0
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5289684Z   Paused: 0
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5289989Z   Stopped: 0
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5290301Z  Images: 6
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5290622Z  Server Version: 28.0.4
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5290988Z  Storage Driver: overlay2
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5291380Z   Backing Filesystem: extfs
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5291778Z   Supports d_type: true
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5292142Z   Using metacopy: false
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5292902Z   Native Overlay Diff: false
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5293297Z   userxattr: false
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5293650Z  Logging Driver: json-file
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5294036Z  Cgroup Driver: systemd
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5294395Z  Cgroup Version: 2
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5294719Z  Plugins:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5295032Z   Volume: local
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5295423Z   Network: bridge host ipvlan macvlan null overlay
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5296140Z   Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5296794Z  Swarm: inactive
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5297202Z  Runtimes: io.containerd.runc.v2 runc
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5297676Z  Default Runtime: runc
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5298068Z  Init Binary: docker-init
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5298583Z  containerd version: 11ce9d5f3c68c941867e82890e93e815c1304f1b
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5299179Z  runc version: v1.3.6-0-g491b69ba
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5299615Z  init version: de40ad0
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5299985Z  Security Options:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5300322Z   apparmor
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5300650Z   seccomp
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5300963Z    Profile: builtin
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5301188Z   cgroupns
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5301450Z  Kernel Version: 6.17.0-1020-azure
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5301847Z  Operating System: Ubuntu 24.04.4 LTS
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5302120Z  OSType: linux
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5302586Z  Architecture: x86_64
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5302826Z  CPUs: 4
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5303299Z  Total Memory: 15.61GiB
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5303533Z  Name: runnervm3jd5f
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5303775Z  ID: 68db87d9-67e2-46d2-9032-068bf1883f31
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5304073Z  Docker Root Dir: /var/lib/docker
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5304327Z  Debug Mode: false
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5304551Z  Username: githubactions
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5304792Z  Experimental: false
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5305025Z  Insecure Registries:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5305296Z   ::1/128
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5305488Z   127.0.0.0/8
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5305703Z  Live Restore Enabled: false
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5305873Z 
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.5306893Z ##[endgroup]
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.6631620Z ##[group]Buildx version
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.6670895Z [command]/usr/bin/docker buildx version
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7369002Z github.com/docker/buildx v0.35.0 a319e5b15052cf6557ceb666eb8ff6e32380b782
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7405076Z ##[endgroup]
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7584675Z ##[group]Inspecting default docker context
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7757154Z [
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7757731Z   {
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7758012Z     "Name": "default",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7758295Z     "Metadata": {},
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7758636Z     "Endpoints": {
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7759068Z       "docker": {
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7759359Z         "Host": "unix:///var/run/docker.sock",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7759702Z         "SkipTLSVerify": false
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7760050Z       }
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7760645Z     },
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7760876Z     "TLSMaterial": {},
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7761107Z     "Storage": {
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7761337Z       "MetadataPath": "<IN MEMORY>",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7761620Z       "TLSPath": "<IN MEMORY>"
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7761866Z     }
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7762051Z   }
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7762236Z ]
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7763482Z ##[endgroup]
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.7764969Z ##[group]Creating a new builder instance
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:32.9120390Z [command]/usr/bin/docker buildx create --name builder-53a076eb-9dfc-4e32-a025-cb632406b00b --driver docker-container --buildkitd-flags --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host --use
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:33.0071672Z builder-53a076eb-9dfc-4e32-a025-cb632406b00b
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:33.0107491Z ##[endgroup]
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:33.0108051Z ##[group]Booting builder
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:33.0159611Z [command]/usr/bin/docker buildx inspect --bootstrap --builder builder-53a076eb-9dfc-4e32-a025-cb632406b00b
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:33.0850357Z #1 [internal] booting buildkit
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:33.2354400Z #1 pulling image moby/buildkit:buildx-stable-1
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.0242912Z #1 pulling image moby/buildkit:buildx-stable-1 3.9s done
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.1749050Z #1 creating container buildx_buildkit_builder-53a076eb-9dfc-4e32-a025-cb632406b00b0
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3304442Z #1 creating container buildx_buildkit_builder-53a076eb-9dfc-4e32-a025-cb632406b00b0 0.3s done
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3324370Z #1 DONE 4.2s
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3756553Z Name:          builder-53a076eb-9dfc-4e32-a025-cb632406b00b
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3757488Z Driver:        docker-container
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3758045Z Last Activity: 2026-07-20 10:13:32 +0000 UTC
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3758457Z 
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3758730Z Nodes:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3761924Z Name:                  builder-53a076eb-9dfc-4e32-a025-cb632406b00b0
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3762932Z Endpoint:              unix:///var/run/docker.sock
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3763470Z Status:                running
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3764270Z BuildKit daemon flags: --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3765002Z BuildKit version:      v0.31.2
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3765488Z Platforms:             linux/amd64, linux/amd64/v2, linux/amd64/v3, linux/386
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3765984Z Labels:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3766381Z  org.mobyproject.buildkit.worker.executor:         oci
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3766934Z  org.mobyproject.buildkit.worker.hostname:         a37e5942ca40
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3767484Z  org.mobyproject.buildkit.worker.network:          host
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3768497Z  org.mobyproject.buildkit.worker.oci.process-mode: sandbox
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3769058Z  org.mobyproject.buildkit.worker.selinux.enabled:  false
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3769602Z  org.mobyproject.buildkit.worker.snapshotter:      overlayfs
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3770080Z GC Policy rule#0:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3770417Z  All:            false
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3770901Z  Filters:        type==source.local type==exec.cachemount type==source.git.checkout
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3771440Z  Keep Duration:  48h0m0s
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3771804Z  Max Used Space: 488.3MiB
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3772161Z GC Policy rule#1:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3773203Z  All:            false
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3773646Z  Keep Duration:  1440h0m0s
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3774069Z  Reserved Space: 9.313GiB
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3774469Z  Max Used Space: 93.13GiB
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3774851Z  Min Free Space: 27.01GiB
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3775226Z GC Policy rule#2:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3775575Z  All:            false
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3775977Z  Reserved Space: 9.313GiB
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3776361Z  Max Used Space: 93.13GiB
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3776741Z  Min Free Space: 27.01GiB
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3777109Z GC Policy rule#3:
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3777444Z  All:            true
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3777797Z  Reserved Space: 9.313GiB
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3778203Z  Max Used Space: 93.13GiB
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3778686Z  Min Free Space: 27.01GiB
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.3809288Z ##[endgroup]
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4728923Z ##[group]Inspect builder
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4732988Z {
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4733727Z   "nodes": [
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4734420Z     {
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4735100Z       "name": "builder-53a076eb-9dfc-4e32-a025-cb632406b00b0",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4736129Z       "endpoint": "unix:///var/run/docker.sock",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4736931Z       "status": "running",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4738049Z       "buildkitd-flags": "--allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4756395Z       "buildkit": "v0.31.2",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4757586Z       "platforms": "linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/386",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4758248Z       "features": {
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4758871Z         "Automatically load images to the Docker Engine image store": true,
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4759589Z         "Cache export": true,
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4760090Z         "Direct push": true,
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4760571Z         "Docker exporter": true,
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4761029Z         "Multi-platform build": true,
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4761505Z         "OCI exporter": true
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4761952Z       },
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4762694Z       "labels": {
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4763260Z         "org.mobyproject.buildkit.worker.executor": "oci",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4764080Z         "org.mobyproject.buildkit.worker.hostname": "a37e5942ca40",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4764848Z         "org.mobyproject.buildkit.worker.network": "host",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4765659Z         "org.mobyproject.buildkit.worker.oci.process-mode": "sandbox",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4766684Z         "org.mobyproject.buildkit.worker.selinux.enabled": "false",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4767595Z         "org.mobyproject.buildkit.worker.snapshotter": "overlayfs"
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4768219Z       },
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4768573Z       "gcPolicy": [
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4768976Z         {
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4769311Z           "all": false,
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4769712Z           "filter": [
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4770328Z             "type==source.local type==exec.cachemount type==source.git.checkout"
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4771021Z           ],
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4771417Z           "keepDuration": "48h0m0s",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4771905Z           "maxUsedSpace": "488.3MiB"
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4772587Z         },
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4772960Z         {
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4773385Z           "all": false,
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4773901Z           "keepDuration": "1440h0m0s",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4774624Z           "reservedSpace": "9.313GiB",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4775429Z           "maxUsedSpace": "93.13GiB",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4775885Z           "minFreeSpace": "27.01GiB"
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4776380Z         },
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4776728Z         {
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4777082Z           "all": false,
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4777517Z           "reservedSpace": "9.313GiB",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4778043Z           "maxUsedSpace": "93.13GiB",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4778528Z           "minFreeSpace": "27.01GiB"
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4778988Z         },
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4779341Z         {
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4779696Z           "all": true,
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4780136Z           "reservedSpace": "9.313GiB",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4780635Z           "maxUsedSpace": "93.13GiB",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4781109Z           "minFreeSpace": "27.01GiB"
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4781557Z         }
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4781898Z       ]
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4782230Z     }
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4782771Z   ],
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4783229Z   "name": "builder-53a076eb-9dfc-4e32-a025-cb632406b00b",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4783874Z   "driver": "docker-container",
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4784370Z   "lastActivity": "2026-07-20T10:13:32.000Z"
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4784883Z }
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4785547Z ##[endgroup]
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4786216Z ##[group]BuildKit version
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4786779Z builder-53a076eb-9dfc-4e32-a025-cb632406b00b0: v0.31.2
+train-and-deploy	Set up Docker Buildx	2026-07-20T10:13:37.4787617Z ##[endgroup]
+train-and-deploy	Login to Docker Hub	﻿2026-07-20T10:13:37.4906116Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4907417Z ##[group]Run docker/login-action@v3
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4907700Z with:
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4907962Z   username: ***
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4908231Z   password: ***
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4908445Z   logout: true
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4908655Z env:
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4909005Z   MLFLOW_TRACKING_URI: ***
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4909288Z   MLFLOW_TRACKING_USERNAME: ***
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4909649Z   MLFLOW_TRACKING_PASSWORD: ***
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4909968Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4910406Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.15/x64/lib/pkgconfig
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4910846Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4911277Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4911666Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4912057Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.15/x64/lib
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.4912689Z ##[endgroup]
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.8109629Z Logging into docker.io...
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.8133549Z (node:2993) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:37.8134511Z (Use `node --trace-deprecation ...` to show where the warning was created)
+train-and-deploy	Login to Docker Hub	2026-07-20T10:13:38.3459233Z Login Succeeded!
+train-and-deploy	Get latest run ID	﻿2026-07-20T10:13:38.3596151Z ##[group]Run RUN_ID=$(cat run_id.txt)
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3596516Z [36;1mRUN_ID=$(cat run_id.txt)[0m
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3596823Z [36;1mecho "run_id=$RUN_ID" >> $GITHUB_OUTPUT[0m
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3597139Z [36;1mecho "Found run ID: $RUN_ID"[0m
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3656180Z shell: /usr/bin/bash -e {0}
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3656470Z env:
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3656965Z   MLFLOW_TRACKING_URI: ***
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3657255Z   MLFLOW_TRACKING_USERNAME: ***
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3657617Z   MLFLOW_TRACKING_PASSWORD: ***
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3657950Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3658401Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.15/x64/lib/pkgconfig
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3658839Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3659242Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3659642Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3660272Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.15/x64/lib
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3660657Z ##[endgroup]
+train-and-deploy	Get latest run ID	2026-07-20T10:13:38.3767726Z Found run ID: 16ad431876eb4050bd451557f0a6ddc2
+train-and-deploy	Build Docker image	﻿2026-07-20T10:13:38.3834284Z ##[group]Run mlflow artifacts download -u "runs:/16ad431876eb4050bd451557f0a6ddc2/model" -d ./model_artifact
+train-and-deploy	Build Docker image	2026-07-20T10:13:38.3835094Z [36;1mmlflow artifacts download -u "runs:/16ad431876eb4050bd451557f0a6ddc2/model" -d ./model_artifact[0m
+train-and-deploy	Build Docker image	2026-07-20T10:13:38.3835725Z [36;1mdocker build -t ***/wine-quality-model:latest .[0m
+train-and-deploy	Build Docker image	2026-07-20T10:13:38.3895282Z shell: /usr/bin/bash -e {0}
+train-and-deploy	Build Docker image	2026-07-20T10:13:38.3895575Z env:
+train-and-deploy	Build Docker image	2026-07-20T10:13:38.3896016Z   MLFLOW_TRACKING_URI: ***
+train-and-deploy	Build Docker image	2026-07-20T10:13:38.3896301Z   MLFLOW_TRACKING_USERNAME: ***
+train-and-deploy	Build Docker image	2026-07-20T10:13:38.3896662Z   MLFLOW_TRACKING_PASSWORD: ***
+train-and-deploy	Build Docker image	2026-07-20T10:13:38.3896994Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Build Docker image	2026-07-20T10:13:38.3897461Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.15/x64/lib/pkgconfig
+train-and-deploy	Build Docker image	2026-07-20T10:13:38.3897925Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Build Docker image	2026-07-20T10:13:38.3898387Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Build Docker image	2026-07-20T10:13:38.3898787Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Build Docker image	2026-07-20T10:13:38.3899224Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.15/x64/lib
+train-and-deploy	Build Docker image	2026-07-20T10:13:38.3899564Z ##[endgroup]
+train-and-deploy	Build Docker image	2026-07-20T10:13:41.6236023Z 
+train-and-deploy	Build Docker image	2026-07-20T10:13:41.6236744Z /home/runner/work/Workflow-CI/Workflow-CI/model_artifact/model
+train-and-deploy	Build Docker image	2026-07-20T10:13:42.2577581Z #0 building with "default" instance using docker driver
+train-and-deploy	Build Docker image	2026-07-20T10:13:42.2578132Z 
+train-and-deploy	Build Docker image	2026-07-20T10:13:42.2578331Z #1 [internal] load build definition from Dockerfile
+train-and-deploy	Build Docker image	2026-07-20T10:13:42.2578725Z #1 transferring dockerfile: 700B 0.0s done
+train-and-deploy	Build Docker image	2026-07-20T10:13:42.2579050Z #1 DONE 0.0s
+train-and-deploy	Build Docker image	2026-07-20T10:13:42.2579183Z 
+train-and-deploy	Build Docker image	2026-07-20T10:13:42.2579398Z #2 [internal] load metadata for docker.io/library/python:3.10-slim
+train-and-deploy	Build Docker image	2026-07-20T10:13:42.4770425Z #2 ...
+train-and-deploy	Build Docker image	2026-07-20T10:13:42.4770729Z 
+train-and-deploy	Build Docker image	2026-07-20T10:13:42.4771011Z #3 [auth] library/python:pull token for registry-1.docker.io
+train-and-deploy	Build Docker image	2026-07-20T10:13:42.4771499Z #3 DONE 0.0s
+train-and-deploy	Build Docker image	2026-07-20T10:13:42.6270797Z 
+train-and-deploy	Build Docker image	2026-07-20T10:13:42.6271140Z #2 [internal] load metadata for docker.io/library/python:3.10-slim
+train-and-deploy	Build Docker image	2026-07-20T10:13:42.9584752Z #2 DONE 0.9s
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1080682Z 
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1081469Z #4 [internal] load .dockerignore
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1081991Z #4 transferring context: 2B done
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1083854Z #4 DONE 0.0s
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1084452Z 
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1084790Z #5 [internal] load build context
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1085315Z #5 transferring context: 1.54MB 0.0s done
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1085835Z #5 DONE 0.0s
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1086053Z 
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1086734Z #6 [1/5] FROM docker.io/library/python:3.10-slim@sha256:c1e4e6c01eb489c422288b2de34b0761ca316f7a2d98e2c33f47659a73ed108a
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1088083Z #6 resolve docker.io/library/python:3.10-slim@sha256:c1e4e6c01eb489c422288b2de34b0761ca316f7a2d98e2c33f47659a73ed108a done
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1089494Z #6 sha256:c1e4e6c01eb489c422288b2de34b0761ca316f7a2d98e2c33f47659a73ed108a 10.37kB / 10.37kB done
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1090465Z #6 sha256:e8d6cdadc17ce7146e1bb286e6093d58c8cf582659a558ad51cd103829655e72 1.75kB / 1.75kB done
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1091348Z #6 sha256:29b4403aef47e336ba5d03cd7c8b8cfbf4152735ab6cfe5ac43f3a1ddaf7633c 5.47kB / 5.47kB done
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1092143Z #6 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 0B / 29.78MB 0.1s
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1093075Z #6 sha256:60e855e0dd9540cc6da6057297f1ab688e602e650a6075fc14da2c2f9c8884d1 0B / 1.29MB 0.1s
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.1093727Z #6 sha256:2f7d10ea5bd937f48518553448d94b63ca5cc4a921cf96a374dee6d36b17c03c 8.39MB / 13.88MB 0.1s
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.2783314Z #6 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 15.73MB / 29.78MB 0.2s
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.2784956Z #6 sha256:2f7d10ea5bd937f48518553448d94b63ca5cc4a921cf96a374dee6d36b17c03c 13.88MB / 13.88MB 0.1s done
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.2786495Z #6 sha256:acf9e06c2d45a94472a7d893455c898eff1f037b1c86b3e32f2dc67c57418da7 0B / 251B 0.2s
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.2788464Z #6 extracting sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.3826129Z #6 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 29.78MB / 29.78MB 0.2s done
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.3828230Z #6 sha256:60e855e0dd9540cc6da6057297f1ab688e602e650a6075fc14da2c2f9c8884d1 1.29MB / 1.29MB 0.2s done
+train-and-deploy	Build Docker image	2026-07-20T10:13:43.3829924Z #6 sha256:acf9e06c2d45a94472a7d893455c898eff1f037b1c86b3e32f2dc67c57418da7 251B / 251B 0.2s done
+train-and-deploy	Build Docker image	2026-07-20T10:13:44.2511686Z #6 extracting sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 0.9s done
+train-and-deploy	Build Docker image	2026-07-20T10:13:44.2512842Z #6 extracting sha256:60e855e0dd9540cc6da6057297f1ab688e602e650a6075fc14da2c2f9c8884d1
+train-and-deploy	Build Docker image	2026-07-20T10:13:44.5381760Z #6 extracting sha256:60e855e0dd9540cc6da6057297f1ab688e602e650a6075fc14da2c2f9c8884d1 0.1s done
+train-and-deploy	Build Docker image	2026-07-20T10:13:44.5383792Z #6 extracting sha256:2f7d10ea5bd937f48518553448d94b63ca5cc4a921cf96a374dee6d36b17c03c 0.1s
+train-and-deploy	Build Docker image	2026-07-20T10:13:45.2081786Z #6 extracting sha256:2f7d10ea5bd937f48518553448d94b63ca5cc4a921cf96a374dee6d36b17c03c 0.7s done
+train-and-deploy	Build Docker image	2026-07-20T10:13:45.2086573Z #6 extracting sha256:acf9e06c2d45a94472a7d893455c898eff1f037b1c86b3e32f2dc67c57418da7 done
+train-and-deploy	Build Docker image	2026-07-20T10:13:45.2087554Z #6 DONE 2.2s
+train-and-deploy	Build Docker image	2026-07-20T10:13:45.3721402Z 
+train-and-deploy	Build Docker image	2026-07-20T10:13:45.3722094Z #7 [2/5] WORKDIR /app
+train-and-deploy	Build Docker image	2026-07-20T10:13:45.3722883Z #7 DONE 0.0s
+train-and-deploy	Build Docker image	2026-07-20T10:13:45.3723068Z 
+train-and-deploy	Build Docker image	2026-07-20T10:13:45.3723274Z #8 [3/5] RUN pip install --no-cache-dir --upgrade pip
+train-and-deploy	Build Docker image	2026-07-20T10:13:46.6205469Z #8 1.399 Requirement already satisfied: pip in /usr/local/lib/python3.10/site-packages (23.0.1)
+train-and-deploy	Build Docker image	2026-07-20T10:13:46.7244365Z #8 1.488 Collecting pip
+train-and-deploy	Build Docker image	2026-07-20T10:13:46.7245258Z #8 1.503   Downloading pip-26.1.2-py3-none-any.whl (1.8 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:46.9571261Z #8 1.527      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 83.3 MB/s eta 0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:13:46.9571847Z #8 1.584 Installing collected packages: pip
+train-and-deploy	Build Docker image	2026-07-20T10:13:46.9572220Z #8 1.584   Attempting uninstall: pip
+train-and-deploy	Build Docker image	2026-07-20T10:13:46.9572959Z #8 1.585     Found existing installation: pip 23.0.1
+train-and-deploy	Build Docker image	2026-07-20T10:13:46.9953179Z #8 1.774     Uninstalling pip-23.0.1:
+train-and-deploy	Build Docker image	2026-07-20T10:13:47.1572575Z #8 1.785       Successfully uninstalled pip-23.0.1
+train-and-deploy	Build Docker image	2026-07-20T10:13:47.7844551Z #8 2.563 Successfully installed pip-26.1.2
+train-and-deploy	Build Docker image	2026-07-20T10:13:47.9356511Z #8 2.564 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+train-and-deploy	Build Docker image	2026-07-20T10:13:47.9478970Z #8 DONE 2.7s
+train-and-deploy	Build Docker image	2026-07-20T10:13:48.0992743Z 
+train-and-deploy	Build Docker image	2026-07-20T10:13:48.0994300Z #9 [4/5] RUN pip install --no-cache-dir     mlflow==2.19.0     scikit-learn     pandas     numpy     matplotlib     dagshub     mlserver     mlserver-mlflow
+train-and-deploy	Build Docker image	2026-07-20T10:13:53.4880069Z #9 5.539 Collecting mlflow==2.19.0
+train-and-deploy	Build Docker image	2026-07-20T10:13:53.6169242Z #9 5.565   Downloading mlflow-2.19.0-py3-none-any.whl.metadata (30 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:53.6170035Z #9 5.668 Collecting scikit-learn
+train-and-deploy	Build Docker image	2026-07-20T10:13:53.7431899Z #9 5.672   Downloading scikit_learn-1.7.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:53.7433303Z #9 5.794 Collecting pandas
+train-and-deploy	Build Docker image	2026-07-20T10:13:53.8970359Z #9 5.798   Downloading pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:53.9887895Z #9 6.040 Collecting numpy
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.1340061Z #9 6.043   Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.1341535Z #9 6.185 Collecting matplotlib
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.2522030Z #9 6.189   Downloading matplotlib-3.10.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (52 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.2523012Z #9 6.215 Collecting dagshub
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.2523446Z #9 6.220   Downloading dagshub-0.7.1-py3-none-any.whl.metadata (12 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.2524251Z #9 6.303 Collecting mlserver
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.3661093Z #9 6.307   Downloading mlserver-1.7.1-py3-none-any.whl.metadata (8.3 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.3662521Z #9 6.394 Collecting mlserver-mlflow
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.3664051Z #9 6.397   Downloading mlserver_mlflow-1.7.1-py3-none-any.whl.metadata (1.5 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.3665195Z #9 6.417 Collecting mlflow-skinny==2.19.0 (from mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.4773489Z #9 6.421   Downloading mlflow_skinny-2.19.0-py3-none-any.whl.metadata (31 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.4774646Z #9 6.440 Collecting Flask<4 (from mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.4775372Z #9 6.444   Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.4775980Z #9 6.455 Collecting Jinja2<4,>=2.11 (from mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.4776568Z #9 6.457   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.4777165Z #9 6.475 Collecting alembic!=1.10.0,<2 (from mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.4777790Z #9 6.478   Downloading alembic-1.18.5-py3-none-any.whl.metadata (7.2 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.4778387Z #9 6.491 Collecting docker<8,>=4.0.0 (from mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.4778962Z #9 6.494   Downloading docker-7.2.0-py3-none-any.whl.metadata (3.8 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.4779547Z #9 6.509 Collecting graphene<4 (from mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.4780144Z #9 6.512   Downloading graphene-3.4.3-py2.py3-none-any.whl.metadata (6.9 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.4780748Z #9 6.529 Collecting gunicorn<24 (from mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.5901861Z #9 6.532   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.5903234Z #9 6.545 Collecting markdown<4,>=3.3 (from mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.5903927Z #9 6.548   Downloading markdown-3.10.2-py3-none-any.whl.metadata (5.1 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.5904593Z #9 6.641 Collecting pyarrow<19,>=4.0.0 (from mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.7446681Z #9 6.645   Downloading pyarrow-18.1.0-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.7456761Z #9 6.797 Collecting scipy<2 (from mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:54.8993603Z #9 6.800   Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.0359680Z #9 7.087 Collecting sqlalchemy<3,>=1.4.0 (from mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.1379822Z #9 7.090   Downloading sqlalchemy-2.0.51-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.1381100Z #9 7.111 Collecting cachetools<6,>=5.0.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.1381811Z #9 7.114   Downloading cachetools-5.5.2-py3-none-any.whl.metadata (5.4 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.1382939Z #9 7.126 Collecting click<9,>=7.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.1384095Z #9 7.129   Downloading click-8.4.2-py3-none-any.whl.metadata (2.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.1385086Z #9 7.140 Collecting cloudpickle<4 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.1386113Z #9 7.143   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.1386824Z #9 7.167 Collecting databricks-sdk<1,>=0.20.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.1387438Z #9 7.170   Downloading databricks_sdk-0.121.0-py3-none-any.whl.metadata (44 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.1387992Z #9 7.189 Collecting gitpython<4,>=3.1.9 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.2386527Z #9 7.192   Downloading gitpython-3.1.52-py3-none-any.whl.metadata (14 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.2387384Z #9 7.235 Collecting importlib_metadata!=4.7.0,<9,>=3.7.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.2388215Z #9 7.238   Downloading importlib_metadata-8.9.0-py3-none-any.whl.metadata (4.5 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.2388919Z #9 7.256 Collecting opentelemetry-api<3,>=1.9.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.2389576Z #9 7.258   Downloading opentelemetry_api-1.44.0-py3-none-any.whl.metadata (1.4 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.2390575Z #9 7.274 Collecting opentelemetry-sdk<3,>=1.9.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.2391214Z #9 7.277   Downloading opentelemetry_sdk-1.44.0-py3-none-any.whl.metadata (1.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.2391953Z #9 7.290 Collecting packaging<25 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.3918357Z #9 7.293   Downloading packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.3995849Z #9 7.451 Collecting protobuf<6,>=3.12.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.5018639Z #9 7.454   Downloading protobuf-5.29.6-cp38-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.5019491Z #9 7.487 Collecting pyyaml<7,>=5.1 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.5020405Z #9 7.490   Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.5021340Z #9 7.508 Collecting requests<3,>=2.17.3 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.5021995Z #9 7.512   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.5022883Z #9 7.521 Collecting sqlparse<1,>=0.4.0 (from mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.5023623Z #9 7.523   Downloading sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.5024129Z #9 7.545 Collecting joblib>=1.2.0 (from scikit-learn)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.5024616Z #9 7.548   Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.5025131Z #9 7.553 Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.6274572Z #9 7.556   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.6275556Z #9 7.568 Collecting python-dateutil>=2.8.2 (from pandas)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.6276310Z #9 7.571   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.6276913Z #9 7.602 Collecting pytz>=2020.1 (from pandas)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.6277428Z #9 7.606   Downloading pytz-2026.2-py2.py3-none-any.whl.metadata (22 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.6277917Z #9 7.615 Collecting tzdata>=2022.7 (from pandas)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.6278416Z #9 7.618   Downloading tzdata-2026.3-py2.py3-none-any.whl.metadata (1.4 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.6278953Z #9 7.679 Collecting contourpy>=1.0.1 (from matplotlib)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.7933833Z #9 7.682   Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.7934790Z #9 7.691 Collecting cycler>=0.10 (from matplotlib)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.7935311Z #9 7.694   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:55.8185100Z #9 7.870 Collecting fonttools>=4.22.0 (from matplotlib)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.0433092Z #9 7.873   Downloading fonttools-4.63.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.0434204Z #9 7.941 Collecting kiwisolver>=1.3.1 (from matplotlib)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.0435228Z #9 7.944   Downloading kiwisolver-1.5.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (5.1 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.0739467Z #9 8.125 Collecting pillow>=8 (from matplotlib)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.2053690Z #9 8.128   Downloading pillow-12.3.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.2055125Z #9 8.150 Collecting pyparsing>=3 (from matplotlib)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.2055946Z #9 8.153   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.2056857Z #9 8.179 Collecting Mako (from alembic!=1.10.0,<2->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.2058197Z #9 8.182   Downloading mako-1.3.12-py3-none-any.whl.metadata (2.9 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.2059471Z #9 8.195 Collecting typing-extensions>=4.12 (from alembic!=1.10.0,<2->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.2060916Z #9 8.198   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.2062011Z #9 8.217 Collecting tomli (from alembic!=1.10.0,<2->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.2063088Z #9 8.220   Downloading tomli-2.4.1-py3-none-any.whl.metadata (10 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.2064112Z #9 8.257 Collecting google-auth~=2.0 (from databricks-sdk<1,>=0.20.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.3694497Z #9 8.260   Downloading google_auth-2.56.0-py3-none-any.whl.metadata (6.0 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.3695662Z #9 8.296 Collecting urllib3<3,>=1.26 (from databricks-sdk<1,>=0.20.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.3696574Z #9 8.299   Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.3697397Z #9 8.311 Collecting blinker>=1.9.0 (from Flask<4->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.3698107Z #9 8.314   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.3698597Z #9 8.322 Collecting itsdangerous>=2.2.0 (from Flask<4->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.3699090Z #9 8.325   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.3699610Z #9 8.420 Collecting markupsafe>=2.1.1 (from Flask<4->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.5792881Z #9 8.424   Downloading markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.5794057Z #9 8.438 Collecting werkzeug>=3.1.0 (from Flask<4->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.5794725Z #9 8.441   Downloading werkzeug-3.1.8-py3-none-any.whl.metadata (4.0 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.5795505Z #9 8.450 Collecting gitdb<5,>=4.0.1 (from gitpython<4,>=3.1.9->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.5796261Z #9 8.452   Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.5797067Z #9 8.460 Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython<4,>=3.1.9->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.5797868Z #9 8.463   Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.5798778Z #9 8.477 Collecting pyasn1-modules>=0.2.1 (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.5799771Z #9 8.480   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.6161369Z #9 8.667 Collecting cryptography>=38.0.3 (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.7170811Z #9 8.671   Downloading cryptography-49.0.0-cp39-abi3-manylinux_2_34_x86_64.whl.metadata (4.3 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.7171811Z #9 8.688 Collecting graphql-core<3.3,>=3.1 (from graphene<4->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.7172709Z #9 8.691   Downloading graphql_core-3.2.11-py3-none-any.whl.metadata (11 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.7173408Z #9 8.699 Collecting graphql-relay<3.3,>=3.1 (from graphene<4->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.7174024Z #9 8.702   Downloading graphql_relay-3.2.0-py3-none-any.whl.metadata (12 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.7174753Z #9 8.722 Collecting zipp>=3.20 (from importlib_metadata!=4.7.0,<9,>=3.7.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.7175476Z #9 8.726   Downloading zipp-4.1.0-py3-none-any.whl.metadata (3.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.7176322Z #9 8.751 Collecting opentelemetry-semantic-conventions==0.65b0 (from opentelemetry-sdk<3,>=1.9.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.7177268Z #9 8.754   Downloading opentelemetry_semantic_conventions-0.65b0-py3-none-any.whl.metadata (2.4 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.7177898Z #9 8.766 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.7178401Z #9 8.769   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:56.8212685Z #9 8.873 Collecting charset_normalizer<4,>=2 (from requests<3,>=2.17.3->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.0058332Z #9 8.876   Downloading charset_normalizer-3.4.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.0059795Z #9 8.886 Collecting idna<4,>=2.5 (from requests<3,>=2.17.3->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.0061361Z #9 8.889   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.0062723Z #9 8.901 Collecting certifi>=2023.5.7 (from requests<3,>=2.17.3->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.0064127Z #9 8.906   Downloading certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.0603642Z #9 9.112 Collecting greenlet>=1 (from sqlalchemy<3,>=1.4.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.1697722Z #9 9.115   Downloading greenlet-3.5.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.1698438Z #9 9.127 Collecting appdirs>=1.4.4 (from dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.1698911Z #9 9.129   Downloading appdirs-1.4.4-py2.py3-none-any.whl.metadata (9.0 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.1699375Z #9 9.144 Collecting httpx>=0.23.0 (from dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.1700341Z #9 9.147   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.1700801Z #9 9.178 Collecting rich>=13.1.0 (from dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.1701223Z #9 9.181   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.1701643Z #9 9.194 Collecting dacite~=1.6.0 (from dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.1702053Z #9 9.196   Downloading dacite-1.6.0-py3-none-any.whl.metadata (14 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.1702904Z #9 9.208 Collecting tenacity>=8.2.2 (from dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.1703334Z #9 9.210   Downloading tenacity-9.1.4-py3-none-any.whl.metadata (1.2 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.1703767Z #9 9.221 Collecting gql[requests] (from dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.3825292Z #9 9.225   Downloading gql-4.0.0-py3-none-any.whl.metadata (10 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.3825944Z #9 9.252 Collecting dataclasses-json (from dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.3826477Z #9 9.255   Downloading dataclasses_json-0.6.7-py3-none-any.whl.metadata (25 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.3826988Z #9 9.262 Collecting treelib>=1.6.4 (from dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.3827449Z #9 9.265   Downloading treelib-1.8.0-py3-none-any.whl.metadata (3.3 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.3827956Z #9 9.280 Collecting pathvalidate>=3.0.0 (from dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.3828441Z #9 9.283   Downloading pathvalidate-3.3.1-py3-none-any.whl.metadata (12 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.5977171Z #9 9.649 Collecting boto3 (from dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.7077229Z #9 9.652   Downloading boto3-1.43.51-py3-none-any.whl.metadata (6.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.7078088Z #9 9.663 Collecting semver (from dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.7078829Z #9 9.665   Downloading semver-3.0.4-py3-none-any.whl.metadata (6.8 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.7079707Z #9 9.674 Collecting dagshub-annotation-converter>=0.2.0 (from dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.7080738Z #9 9.677   Downloading dagshub_annotation_converter-0.2.0-py3-none-any.whl.metadata (4.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.7081645Z #9 9.686 Collecting aiofiles (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.7082690Z #9 9.689   Downloading aiofiles-25.1.0-py3-none-any.whl.metadata (6.3 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.7083491Z #9 9.718 Collecting aiokafka (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.7084545Z #9 9.721   Downloading aiokafka-0.14.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.0 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.7085260Z #9 9.759 Collecting fastapi!=0.89.0,<0.116.0,>=0.88.0 (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.8152036Z #9 9.763   Downloading fastapi-0.115.14-py3-none-any.whl.metadata (27 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.8153447Z #9 9.866 Collecting gevent (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.9558149Z #9 9.871   Downloading gevent-26.5.0-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (14 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:57.9559111Z #9 10.01 Collecting geventhttpclient (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:58.1101147Z #9 10.01   Downloading geventhttpclient-2.3.9-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.5 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:58.5407730Z #9 10.59 Collecting grpcio>=1.67.1 (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:58.7651145Z #9 10.60   Downloading grpcio-1.82.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:58.7652766Z #9 10.61 Collecting importlib-resources<7.0,>=5.12 (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:58.7653703Z #9 10.61   Downloading importlib_resources-6.5.2-py3-none-any.whl.metadata (3.9 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:58.7654527Z #9 10.63 Collecting opentelemetry-exporter-otlp-proto-grpc<2.0.0,>=1.22.0 (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:58.7655700Z #9 10.63   Downloading opentelemetry_exporter_otlp_proto_grpc-1.44.0-py3-none-any.whl.metadata (2.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:58.7656611Z #9 10.65 Collecting opentelemetry-instrumentation-fastapi>=0.43b0 (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:58.7668963Z #9 10.65   Downloading opentelemetry_instrumentation_fastapi-0.65b0-py3-none-any.whl.metadata (2.2 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:58.7669973Z #9 10.66 Collecting opentelemetry-instrumentation-grpc>=0.43b0 (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:58.7670802Z #9 10.67   Downloading opentelemetry_instrumentation_grpc-0.65b0-py3-none-any.whl.metadata (1.9 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:58.9384832Z #9 10.99 Collecting orjson (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.0684854Z #9 10.99   Downloading orjson-3.11.9-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.0686272Z #9 11.01 Collecting py-grpc-prometheus (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.0687134Z #9 11.01   Downloading py_grpc_prometheus-0.8.0-py3-none-any.whl.metadata (5.4 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.0687784Z #9 11.12 Collecting pydantic<3.0.0,>=2.7.1 (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.1762819Z #9 11.12   Downloading pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.1764133Z #9 11.14 Collecting pydantic-settings<3.0.0,>=2.3.0 (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.1765322Z #9 11.14   Downloading pydantic_settings-2.14.2-py3-none-any.whl.metadata (3.4 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.1766493Z #9 11.15 Collecting python-dotenv (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.1767521Z #9 11.16   Downloading python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.1768578Z #9 11.16 Collecting python-multipart (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.1769613Z #9 11.17   Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.1770666Z #9 11.18 Collecting starlette-exporter (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.1771719Z #9 11.18   Downloading starlette_exporter-0.23.0-py3-none-any.whl.metadata (11 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.1773061Z #9 11.20 Collecting tritonclient>=2.42 (from tritonclient[http]>=2.42->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.1773855Z #9 11.20   Downloading tritonclient-2.70.0-py3-none-any.whl.metadata (3.1 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.1774380Z #9 11.23 Collecting uvicorn (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.2883366Z #9 11.23   Downloading uvicorn-0.51.0-py3-none-any.whl.metadata (6.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.2884747Z #9 11.27 Collecting uvloop (from mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.2885950Z #9 11.27   Downloading uvloop-0.22.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.2886843Z #9 11.29 Collecting starlette<0.47.0,>=0.40.0 (from fastapi!=0.89.0,<0.116.0,>=0.88.0->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.2887479Z #9 11.29   Downloading starlette-0.46.2-py3-none-any.whl.metadata (6.2 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.2888236Z #9 11.32 Collecting googleapis-common-protos~=1.57 (from opentelemetry-exporter-otlp-proto-grpc<2.0.0,>=1.22.0->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.2889055Z #9 11.32   Downloading googleapis_common_protos-1.75.0-py3-none-any.whl.metadata (8.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.2889938Z #9 11.34 Collecting opentelemetry-exporter-otlp-proto-common==1.44.0 (from opentelemetry-exporter-otlp-proto-grpc<2.0.0,>=1.22.0->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.4859408Z #9 11.34   Downloading opentelemetry_exporter_otlp_proto_common-1.44.0-py3-none-any.whl.metadata (1.8 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.4860689Z #9 11.35 Collecting opentelemetry-proto==1.44.0 (from opentelemetry-exporter-otlp-proto-grpc<2.0.0,>=1.22.0->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.4861622Z #9 11.36   Downloading opentelemetry_proto-1.44.0-py3-none-any.whl.metadata (2.3 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.4862545Z #9 11.38 Collecting annotated-types>=0.6.0 (from pydantic<3.0.0,>=2.7.1->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:13:59.4863699Z #9 11.39   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.1183177Z #9 12.17 Collecting pydantic-core==2.46.4 (from pydantic<3.0.0,>=2.7.1->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.2963659Z #9 12.17   Downloading pydantic_core-2.46.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.4630345Z #9 12.18 Collecting typing-inspection>=0.4.2 (from pydantic<3.0.0,>=2.7.1->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.4631477Z #9 12.18   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.4632850Z #9 12.22 Collecting anyio<5,>=3.6.2 (from starlette<0.47.0,>=0.40.0->fastapi!=0.89.0,<0.116.0,>=0.88.0->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.4633837Z #9 12.22   Downloading anyio-4.14.2-py3-none-any.whl.metadata (4.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.4634617Z #9 12.23 Collecting exceptiongroup>=1.0.2 (from anyio<5,>=3.6.2->starlette<0.47.0,>=0.40.0->fastapi!=0.89.0,<0.116.0,>=0.88.0->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.4635465Z #9 12.23   Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.4636344Z #9 12.35 Collecting cffi>=2.0.0 (from cryptography>=38.0.3->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.4637416Z #9 12.35   Downloading cffi-2.1.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.6299459Z #9 12.36 Collecting pycparser (from cffi>=2.0.0->cryptography>=38.0.3->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.6300533Z #9 12.36   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.6301151Z #9 12.68 Collecting lxml (from dagshub-annotation-converter>=0.2.0->dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.7336875Z #9 12.68   Downloading lxml-6.1.1-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.5 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.7337883Z #9 12.71 Collecting httpcore==1.* (from httpx>=0.23.0->dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.7338529Z #9 12.71   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.7339201Z #9 12.72 Collecting h11>=0.16 (from httpcore==1.*->httpx>=0.23.0->dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.7339873Z #9 12.72   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.7340832Z #9 12.75 Collecting opentelemetry-instrumentation-asgi==0.65b0 (from opentelemetry-instrumentation-fastapi>=0.43b0->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.7341957Z #9 12.75   Downloading opentelemetry_instrumentation_asgi-0.65b0-py3-none-any.whl.metadata (2.0 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.7343298Z #9 12.76 Collecting opentelemetry-instrumentation==0.65b0 (from opentelemetry-instrumentation-fastapi>=0.43b0->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.7344387Z #9 12.77   Downloading opentelemetry_instrumentation-0.65b0-py3-none-any.whl.metadata (7.2 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.7345414Z #9 12.78 Collecting opentelemetry-util-http==0.65b0 (from opentelemetry-instrumentation-fastapi>=0.43b0->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:00.7346406Z #9 12.78   Downloading opentelemetry_util_http-0.65b0-py3-none-any.whl.metadata (2.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.0219382Z #9 13.07 Collecting wrapt<3.0.0,>=1.0.0 (from opentelemetry-instrumentation==0.65b0->opentelemetry-instrumentation-fastapi>=0.43b0->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.1464678Z #9 13.08   Downloading wrapt-2.2.2-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (7.4 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.1466433Z #9 13.09 Collecting asgiref~=3.0 (from opentelemetry-instrumentation-asgi==0.65b0->opentelemetry-instrumentation-fastapi>=0.43b0->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.1467848Z #9 13.10   Downloading asgiref-3.12.1-py3-none-any.whl.metadata (9.4 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.1469179Z #9 13.12 Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==2.19.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.1470486Z #9 13.12   Downloading pyasn1-0.6.4-py3-none-any.whl.metadata (8.4 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.1472150Z #9 13.14 Collecting markdown-it-py>=2.2.0 (from rich>=13.1.0->dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.1473240Z #9 13.14   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.1473764Z #9 13.16 Collecting pygments<3.0.0,>=2.13.0 (from rich>=13.1.0->dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.1474540Z #9 13.16   Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.1475076Z #9 13.17 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.1.0->dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.1475583Z #9 13.17   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.1476131Z #9 13.20 Collecting ml-dtypes<=0.5.4 (from tritonclient>=2.42->tritonclient[http]>=2.42->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.2999847Z #9 13.20   Downloading ml_dtypes-0.5.4-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.9 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.3297576Z #9 13.38 Collecting python-rapidjson>=0.9.1 (from tritonclient>=2.42->tritonclient[http]>=2.42->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.4844689Z #9 13.39   Downloading python_rapidjson-1.23-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (24 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.8548311Z #9 13.91 Collecting aiohttp<4.0.0,>=3.8.1 (from tritonclient[http]>=2.42->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.9794416Z #9 13.91   Downloading aiohttp-3.14.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.9795988Z #9 13.92 Collecting greenlet>=1 (from sqlalchemy<3,>=1.4.0->mlflow==2.19.0)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.9797090Z #9 13.92   Downloading greenlet-3.3.2-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.7 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.9798460Z #9 13.93 Collecting aiohappyeyeballs>=2.5.0 (from aiohttp<4.0.0,>=3.8.1->tritonclient[http]>=2.42->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.9799601Z #9 13.94   Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.9800601Z #9 13.94 Collecting aiosignal>=1.4.0 (from aiohttp<4.0.0,>=3.8.1->tritonclient[http]>=2.42->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.9801588Z #9 13.94   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.9802836Z #9 13.95 Collecting async-timeout<6.0,>=4.0 (from aiohttp<4.0.0,>=3.8.1->tritonclient[http]>=2.42->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.9803757Z #9 13.95   Downloading async_timeout-5.0.1-py3-none-any.whl.metadata (5.1 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.9804338Z #9 13.96 Collecting attrs>=17.3.0 (from aiohttp<4.0.0,>=3.8.1->tritonclient[http]>=2.42->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.9804888Z #9 13.97   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:01.9805433Z #9 14.03 Collecting frozenlist>=1.1.1 (from aiohttp<4.0.0,>=3.8.1->tritonclient[http]>=2.42->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:02.1331309Z #9 14.03   Downloading frozenlist-1.8.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:02.3357637Z #9 14.39 Collecting multidict<7.0,>=4.5 (from aiohttp<4.0.0,>=3.8.1->tritonclient[http]>=2.42->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:02.5481909Z #9 14.39   Downloading multidict-6.7.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:02.5483655Z #9 14.45 Collecting propcache>=0.2.0 (from aiohttp<4.0.0,>=3.8.1->tritonclient[http]>=2.42->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:02.5484959Z #9 14.45   Downloading propcache-0.5.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:02.6621968Z #9 14.71 Collecting yarl<2.0,>=1.17.0 (from aiohttp<4.0.0,>=3.8.1->tritonclient[http]>=2.42->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:02.8788586Z #9 14.72   Downloading yarl-1.24.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (103 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:02.8790181Z #9 14.77 Collecting brotli (from geventhttpclient->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:02.8791491Z #9 14.78   Downloading brotli-1.2.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.1 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.1065929Z #9 15.16 Collecting botocore<1.44.0,>=1.43.51 (from boto3->dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.2138850Z #9 15.17   Downloading botocore-1.43.51-py3-none-any.whl.metadata (5.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.2139770Z #9 15.17 Collecting jmespath<2.0.0,>=0.7.1 (from boto3->dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.2140697Z #9 15.18   Downloading jmespath-1.1.0-py3-none-any.whl.metadata (7.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.2141223Z #9 15.19 Collecting s3transfer<0.20.0,>=0.19.0 (from boto3->dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.2141738Z #9 15.19   Downloading s3transfer-0.19.1-py3-none-any.whl.metadata (1.7 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.2142554Z #9 15.27 Collecting marshmallow<4.0.0,>=3.18.0 (from dataclasses-json->dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.3738309Z #9 15.27   Downloading marshmallow-3.26.2-py3-none-any.whl.metadata (7.3 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.3739766Z #9 15.28 Collecting typing-inspect<1,>=0.4.0 (from dataclasses-json->dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.3741166Z #9 15.28   Downloading typing_inspect-0.9.0-py3-none-any.whl.metadata (1.5 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.3742947Z #9 15.29 Collecting mypy-extensions>=0.3.0 (from typing-inspect<1,>=0.4.0->dataclasses-json->dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.3744326Z #9 15.29   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.3745339Z #9 15.31 Collecting zope.event (from gevent->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.3746328Z #9 15.31   Downloading zope_event-6.2-py3-none-any.whl.metadata (5.4 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.3747265Z #9 15.42 Collecting zope.interface (from gevent->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.4853646Z #9 15.43   Downloading zope_interface-8.5-cp310-cp310-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (47 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.4854968Z #9 15.44 Collecting backoff<3.0,>=1.11.1 (from gql[requests]->dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.4855977Z #9 15.45   Downloading backoff-2.2.1-py3-none-any.whl.metadata (14 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.4857101Z #9 15.46 Collecting requests_toolbelt<2,>=1.0.0 (from gql[requests]->dagshub)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.4858218Z #9 15.46   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.4859093Z #9 15.48 Requirement already satisfied: setuptools>=39.0.1 in /usr/local/lib/python3.10/site-packages (from py-grpc-prometheus->mlserver) (79.0.1)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.4859888Z #9 15.50 Collecting prometheus-client>=0.3.0 (from py-grpc-prometheus->mlserver)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.4860450Z #9 15.50   Downloading prometheus_client-0.25.0-py3-none-any.whl.metadata (2.1 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:03.4860957Z #9 15.54 Downloading mlflow-2.19.0-py3-none-any.whl (27.4 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.0638796Z #9 15.98    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 27.4/27.4 MB 61.6 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.0639757Z #9 15.98 Downloading mlflow_skinny-2.19.0-py3-none-any.whl (5.9 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.0641001Z #9 16.01    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.9/5.9 MB 257.9 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.0642075Z #9 16.01 Downloading scikit_learn-1.7.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.0643655Z #9 16.05    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 323.2 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.0644685Z #9 16.05 Downloading pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.1673878Z #9 16.12    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 204.8 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.1674998Z #9 16.12 Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.1676234Z #9 16.18    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 283.3 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.1677287Z #9 16.19 Downloading matplotlib-3.10.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.8 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3919616Z #9 16.22    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 285.7 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3920244Z #9 16.22 Downloading alembic-1.18.5-py3-none-any.whl (264 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3920738Z #9 16.23 Downloading cachetools-5.5.2-py3-none-any.whl (10 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3921510Z #9 16.23 Downloading click-8.4.2-py3-none-any.whl (119 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3921971Z #9 16.23 Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3922717Z #9 16.23 Downloading databricks_sdk-0.121.0-py3-none-any.whl (958 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3923578Z #9 16.24    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 958.8/958.8 kB 601.8 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3924051Z #9 16.24 Downloading docker-7.2.0-py3-none-any.whl (148 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3924505Z #9 16.25 Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3924966Z #9 16.25 Downloading gitpython-3.1.52-py3-none-any.whl (215 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3925410Z #9 16.25 Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3925848Z #9 16.25 Downloading google_auth-2.56.0-py3-none-any.whl (257 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3926324Z #9 16.26 Downloading graphene-3.4.3-py2.py3-none-any.whl (114 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3926805Z #9 16.26 Downloading graphql_core-3.2.11-py3-none-any.whl (214 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3927269Z #9 16.26 Downloading graphql_relay-3.2.0-py3-none-any.whl (16 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3927719Z #9 16.27 Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3928207Z #9 16.27 Downloading importlib_metadata-8.9.0-py3-none-any.whl (27 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3928677Z #9 16.27 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3929106Z #9 16.27 Downloading markdown-3.10.2-py3-none-any.whl (108 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3929585Z #9 16.28 Downloading opentelemetry_api-1.44.0-py3-none-any.whl (60 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3930093Z #9 16.28 Downloading opentelemetry_sdk-1.44.0-py3-none-any.whl (137 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3930678Z #9 16.28 Downloading opentelemetry_semantic_conventions-0.65b0-py3-none-any.whl (204 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3931246Z #9 16.29 Downloading packaging-24.2-py3-none-any.whl (65 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3931746Z #9 16.29 Downloading protobuf-5.29.6-cp38-abi3-manylinux2014_x86_64.whl (320 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:04.3932435Z #9 16.29 Downloading pyarrow-18.1.0-cp310-cp310-manylinux_2_28_x86_64.whl (40.1 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.3277088Z #9 17.21    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.1/40.1 MB 43.7 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.3278160Z #9 17.21 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.3279522Z #9 17.21 Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.3280913Z #9 17.22    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 856.8 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.3281714Z #9 17.22 Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.3283179Z #9 17.22 Downloading charset_normalizer-3.4.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (223 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.3284383Z #9 17.23 Downloading idna-3.18-py3-none-any.whl (65 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.3285316Z #9 17.23 Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4296038Z #9 17.38    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.7/37.7 MB 253.6 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4296596Z #9 17.38 Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4297280Z #9 17.39 Downloading sqlalchemy-2.0.51-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.2 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4298018Z #9 17.40    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 298.7 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4298443Z #9 17.40 Downloading sqlparse-0.5.5-py3-none-any.whl (46 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4298887Z #9 17.41 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4299323Z #9 17.41 Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4299706Z #9 17.41 Downloading dagshub-0.7.1-py3-none-any.whl (273 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4300090Z #9 17.42 Downloading dacite-1.6.0-py3-none-any.whl (12 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4300504Z #9 17.42 Downloading mlserver-1.7.1-py3-none-any.whl (129 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4300915Z #9 17.42 Downloading fastapi-0.115.14-py3-none-any.whl (95 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4301367Z #9 17.43 Downloading importlib_resources-6.5.2-py3-none-any.whl (37 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4302197Z #9 17.43 Downloading opentelemetry_exporter_otlp_proto_grpc-1.44.0-py3-none-any.whl (19 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4303179Z #9 17.43 Downloading opentelemetry_exporter_otlp_proto_common-1.44.0-py3-none-any.whl (17 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4303754Z #9 17.44 Downloading opentelemetry_proto-1.44.0-py3-none-any.whl (72 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4304253Z #9 17.44 Downloading googleapis_common_protos-1.75.0-py3-none-any.whl (300 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4304853Z #9 17.44 Downloading grpcio-1.82.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.9 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4305510Z #9 17.47    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 245.5 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4305942Z #9 17.48 Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.4306520Z #9 17.48 Downloading pydantic_core-2.46.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5493671Z #9 17.49    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 323.1 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5494488Z #9 17.49 Downloading pydantic_settings-2.14.2-py3-none-any.whl (61 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5495097Z #9 17.50 Downloading starlette-0.46.2-py3-none-any.whl (72 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5495623Z #9 17.50 Downloading anyio-4.14.2-py3-none-any.whl (125 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5496170Z #9 17.50 Downloading mlserver_mlflow-1.7.1-py3-none-any.whl (10 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5496733Z #9 17.50 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5497277Z #9 17.51 Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5497790Z #9 17.51 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5498302Z #9 17.51 Downloading certifi-2026.6.17-py3-none-any.whl (133 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5499006Z #9 17.52 Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (325 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5499786Z #9 17.52 Downloading cryptography-49.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5501004Z #9 17.54    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 279.4 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5501697Z #9 17.54 Downloading cffi-2.1.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (218 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5502803Z #9 17.55 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5503374Z #9 17.55 Downloading dagshub_annotation_converter-0.2.0-py3-none-any.whl (68 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5503972Z #9 17.55 Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.5504656Z #9 17.55 Downloading fonttools-4.63.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.9 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6508387Z #9 17.60    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 113.9 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6509673Z #9 17.60 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6510282Z #9 17.61 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6510860Z #9 17.61 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6511679Z #9 17.61 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6512595Z #9 17.62 Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6513434Z #9 17.62 Downloading kiwisolver-1.5.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6514457Z #9 17.63    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 359.7 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6515322Z #9 17.63 Downloading markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6516313Z #9 17.63 Downloading opentelemetry_instrumentation_fastapi-0.65b0-py3-none-any.whl (13 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6517135Z #9 17.64 Downloading opentelemetry_instrumentation-0.65b0-py3-none-any.whl (36 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6517909Z #9 17.64 Downloading opentelemetry_instrumentation_asgi-0.65b0-py3-none-any.whl (15 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6518643Z #9 17.64 Downloading opentelemetry_util_http-0.65b0-py3-none-any.whl (8.2 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6519261Z #9 17.65 Downloading asgiref-3.12.1-py3-none-any.whl (25 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6520033Z #9 17.65 Downloading wrapt-2.2.2-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (152 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6520924Z #9 17.65 Downloading opentelemetry_instrumentation_grpc-0.65b0-py3-none-any.whl (24 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6521591Z #9 17.65 Downloading pathvalidate-3.3.1-py3-none-any.whl (24 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6522610Z #9 17.66 Downloading pillow-12.3.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6523485Z #9 17.69    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 230.3 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6524075Z #9 17.70 Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6524596Z #9 17.70 Downloading pyasn1-0.6.4-py3-none-any.whl (84 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.6524994Z #9 17.70 Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.8456007Z #9 17.71 Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.8457041Z #9 17.71 Downloading pytz-2026.2-py2.py3-none-any.whl (510 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.8457648Z #9 17.71 Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.8458131Z #9 17.72 Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.8458935Z #9 17.72    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 774.2 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.8459480Z #9 17.72 Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.8459971Z #9 17.73 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.8460426Z #9 17.73 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.8461380Z #9 17.73 Downloading tenacity-9.1.4-py3-none-any.whl (28 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.8461876Z #9 17.73 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.8462626Z #9 17.74 Downloading treelib-1.8.0-py3-none-any.whl (30 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.8463153Z #9 17.74 Downloading tritonclient-2.70.0-py3-none-any.whl (111 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:05.8463836Z #9 17.75 Downloading ml_dtypes-0.5.4-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (5.0 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1698403Z #9 18.11    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 13.3 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1699558Z #9 18.11 Downloading python_rapidjson-1.23-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1700803Z #9 18.12    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 638.0 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1701916Z #9 18.12 Downloading aiohttp-3.14.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1703542Z #9 18.13    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 380.1 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1704335Z #9 18.13 Downloading async_timeout-5.0.1-py3-none-any.whl (6.2 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1705305Z #9 18.14 Downloading greenlet-3.3.2-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (591 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1706858Z #9 18.14    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 591.7/591.7 kB 695.7 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1707975Z #9 18.14 Downloading multidict-6.7.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (243 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1708854Z #9 18.14 Downloading yarl-1.24.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (110 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1709514Z #9 18.15 Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1709972Z #9 18.15 Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1710374Z #9 18.15 Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1710987Z #9 18.16 Downloading frozenlist-1.8.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (219 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1711816Z #9 18.16 Downloading geventhttpclient-2.3.9-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (114 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1712893Z #9 18.16 Downloading propcache-0.5.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (60 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1713535Z #9 18.17 Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1713978Z #9 18.17 Downloading tzdata-2026.3-py2.py3-none-any.whl (348 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1714676Z #9 18.17 Downloading werkzeug-3.1.8-py3-none-any.whl (226 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1715061Z #9 18.18 Downloading zipp-4.1.0-py3-none-any.whl (10 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1715438Z #9 18.18 Downloading aiofiles-25.1.0-py3-none-any.whl (14 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1716033Z #9 18.18 Downloading aiokafka-0.14.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.0 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1716796Z #9 18.19    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 580.6 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1717230Z #9 18.19 Downloading boto3-1.43.51-py3-none-any.whl (140 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.1717651Z #9 18.19 Downloading botocore-1.43.51-py3-none-any.whl (15.4 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2706467Z #9 18.22    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.4/15.4 MB 589.8 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2707653Z #9 18.22 Downloading jmespath-1.1.0-py3-none-any.whl (20 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2708476Z #9 18.23 Downloading s3transfer-0.19.1-py3-none-any.whl (90 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2709498Z #9 18.23 Downloading brotli-1.2.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2710726Z #9 18.24    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 753.8 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2711557Z #9 18.24 Downloading dataclasses_json-0.6.7-py3-none-any.whl (28 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2713065Z #9 18.24 Downloading marshmallow-3.26.2-py3-none-any.whl (50 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2713573Z #9 18.25 Downloading typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2714028Z #9 18.25 Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2714750Z #9 18.26 Downloading gevent-26.5.0-cp310-cp310-manylinux_2_28_x86_64.whl (2.2 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2715369Z #9 18.27    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 580.3 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2715807Z #9 18.27 Downloading gql-4.0.0-py3-none-any.whl (89 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2716198Z #9 18.27 Downloading backoff-2.2.1-py3-none-any.whl (15 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2716639Z #9 18.27 Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2717203Z #9 18.28 Downloading lxml-6.1.1-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2717820Z #9 18.30    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 296.6 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2718237Z #9 18.30 Downloading mako-1.3.12-py3-none-any.whl (78 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2718757Z #9 18.30 Downloading orjson-3.11.9-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (134 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2719320Z #9 18.31 Downloading py_grpc_prometheus-0.8.0-py3-none-any.whl (12 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2719788Z #9 18.31 Downloading prometheus_client-0.25.0-py3-none-any.whl (64 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2720216Z #9 18.31 Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2720633Z #9 18.32 Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2721052Z #9 18.32 Downloading semver-3.0.4-py3-none-any.whl (17 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.2721471Z #9 18.32 Downloading starlette_exporter-0.23.0-py3-none-any.whl (16 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.4504448Z #9 18.32 Downloading tomli-2.4.1-py3-none-any.whl (14 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.4505201Z #9 18.33 Downloading uvicorn-0.51.0-py3-none-any.whl (73 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.4506004Z #9 18.33 Downloading uvloop-0.22.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.7 MB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.4507143Z #9 18.34    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 313.4 MB/s  0:00:00
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.4507698Z #9 18.35 Downloading zope_event-6.2-py3-none-any.whl (6.5 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.4508614Z #9 18.35 Downloading zope_interface-8.5-cp310-cp310-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (259 kB)
+train-and-deploy	Build Docker image	2026-07-20T10:14:06.9911109Z #9 19.04 Installing collected packages: pytz, brotli, appdirs, zope.interface, zope.event, zipp, wrapt, uvloop, urllib3, tzdata, typing-extensions, tomli, threadpoolctl, tenacity, sqlparse, smmap, six, semver, pyyaml, python-rapidjson, python-multipart, python-dotenv, pyparsing, pygments, pycparser, pyasn1, pyarrow, protobuf, propcache, prometheus-client, pillow, pathvalidate, packaging, orjson, opentelemetry-util-http, numpy, mypy-extensions, mdurl, markupsafe, markdown, lxml, kiwisolver, joblib, jmespath, itsdangerous, importlib-resources, idna, h11, greenlet, graphql-core, frozenlist, fonttools, dacite, cycler, cloudpickle, click, charset_normalizer, certifi, cachetools, blinker, backoff, attrs, async-timeout, annotated-types, aiohappyeyeballs, aiofiles, werkzeug, uvicorn, typing-inspection, typing-inspect, treelib, sqlalchemy, scipy, requests, python-dateutil, pydantic-core, pyasn1-modules, opentelemetry-proto, opentelemetry-api, multidict, ml-dtypes, marshmallow, markdown-it-py, Mako, Jinja2, importlib_metadata, httpcore, gunicorn, grpcio, graphql-relay, googleapis-common-protos, gitdb, gevent, exceptiongroup, contourpy, cffi, asgiref, aiosignal, aiokafka, yarl, tritonclient, scikit-learn, rich, requests_toolbelt, pydantic, py-grpc-prometheus, pandas, opentelemetry-semantic-conventions, opentelemetry-exporter-otlp-proto-common, matplotlib, graphene, gitpython, geventhttpclient, Flask, docker, dataclasses-json, cryptography, botocore, anyio, alembic, starlette, s3transfer, pydantic-settings, opentelemetry-sdk, opentelemetry-instrumentation, httpx, gql, google-auth, dagshub-annotation-converter, aiohttp, starlette-exporter, opentelemetry-instrumentation-grpc, opentelemetry-instrumentation-asgi, opentelemetry-exporter-otlp-proto-grpc, fastapi, databricks-sdk, boto3, opentelemetry-instrumentation-fastapi, mlflow-skinny, dagshub, mlserver, mlflow, mlserver-mlflow
+train-and-deploy	Build Docker image	2026-07-20T10:14:09.8686375Z #9 21.92   Attempting uninstall: packaging
+train-and-deploy	Build Docker image	2026-07-20T10:14:10.0252624Z #9 21.92     Found existing installation: packaging 26.2
+train-and-deploy	Build Docker image	2026-07-20T10:14:10.0253298Z #9 21.92     Uninstalling packaging-26.2:
+train-and-deploy	Build Docker image	2026-07-20T10:14:10.0253723Z #9 21.93       Successfully uninstalled packaging-26.2
+train-and-deploy	Build Docker image	2026-07-20T10:14:31.2313510Z #9 43.28 
+train-and-deploy	Build Docker image	2026-07-20T10:14:31.4058162Z #9 43.30 Successfully installed Flask-3.1.3 Jinja2-3.1.6 Mako-1.3.12 aiofiles-25.1.0 aiohappyeyeballs-2.7.1 aiohttp-3.14.1 aiokafka-0.14.0 aiosignal-1.4.0 alembic-1.18.5 annotated-types-0.7.0 anyio-4.14.2 appdirs-1.4.4 asgiref-3.12.1 async-timeout-5.0.1 attrs-26.1.0 backoff-2.2.1 blinker-1.9.0 boto3-1.43.51 botocore-1.43.51 brotli-1.2.0 cachetools-5.5.2 certifi-2026.6.17 cffi-2.1.0 charset_normalizer-3.4.9 click-8.4.2 cloudpickle-3.1.2 contourpy-1.3.2 cryptography-49.0.0 cycler-0.12.1 dacite-1.6.0 dagshub-0.7.1 dagshub-annotation-converter-0.2.0 databricks-sdk-0.121.0 dataclasses-json-0.6.7 docker-7.2.0 exceptiongroup-1.3.1 fastapi-0.115.14 fonttools-4.63.0 frozenlist-1.8.0 gevent-26.5.0 geventhttpclient-2.3.9 gitdb-4.0.12 gitpython-3.1.52 google-auth-2.56.0 googleapis-common-protos-1.75.0 gql-4.0.0 graphene-3.4.3 graphql-core-3.2.11 graphql-relay-3.2.0 greenlet-3.3.2 grpcio-1.82.1 gunicorn-23.0.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.18 importlib-resources-6.5.2 importlib_metadata-8.9.0 itsdangerous-2.2.0 jmespath-1.1.0 joblib-1.5.3 kiwisolver-1.5.0 lxml-6.1.1 markdown-3.10.2 markdown-it-py-4.2.0 markupsafe-3.0.3 marshmallow-3.26.2 matplotlib-3.10.9 mdurl-0.1.2 ml-dtypes-0.5.4 mlflow-2.19.0 mlflow-skinny-2.19.0 mlserver-1.7.1 mlserver-mlflow-1.7.1 multidict-6.7.1 mypy-extensions-1.1.0 numpy-2.2.6 opentelemetry-api-1.44.0 opentelemetry-exporter-otlp-proto-common-1.44.0 opentelemetry-exporter-otlp-proto-grpc-1.44.0 opentelemetry-instrumentation-0.65b0 opentelemetry-instrumentation-asgi-0.65b0 opentelemetry-instrumentation-fastapi-0.65b0 opentelemetry-instrumentation-grpc-0.65b0 opentelemetry-proto-1.44.0 opentelemetry-sdk-1.44.0 opentelemetry-semantic-conventions-0.65b0 opentelemetry-util-http-0.65b0 orjson-3.11.9 packaging-24.2 pandas-2.3.3 pathvalidate-3.3.1 pillow-12.3.0 prometheus-client-0.25.0 propcache-0.5.2 protobuf-5.29.6 py-grpc-prometheus-0.8.0 pyarrow-18.1.0 pyasn1-0.6.4 pyasn1-modules-0.4.2 pycparser-3.0 pydantic-2.13.4 pydantic-core-2.46.4 pydantic-settings-2.14.2 pygments-2.20.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 python-dotenv-1.2.2 python-multipart-0.0.32 python-rapidjson-1.23 pytz-2026.2 pyyaml-6.0.3 requests-2.34.2 requests_toolbelt-1.0.0 rich-15.0.0 s3transfer-0.19.1 scikit-learn-1.7.2 scipy-1.15.3 semver-3.0.4 six-1.17.0 smmap-5.0.3 sqlalchemy-2.0.51 sqlparse-0.5.5 starlette-0.46.2 starlette-exporter-0.23.0 tenacity-9.1.4 threadpoolctl-3.6.0 tomli-2.4.1 treelib-1.8.0 tritonclient-2.70.0 typing-extensions-4.16.0 typing-inspect-0.9.0 typing-inspection-0.4.2 tzdata-2026.3 urllib3-2.7.0 uvicorn-0.51.0 uvloop-0.22.1 werkzeug-3.1.8 wrapt-2.2.2 yarl-1.24.5 zipp-4.1.0 zope.event-6.2 zope.interface-8.5
+train-and-deploy	Build Docker image	2026-07-20T10:14:31.4068766Z #9 43.31 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+train-and-deploy	Build Docker image	2026-07-20T10:14:33.8999329Z #9 DONE 46.0s
+train-and-deploy	Build Docker image	2026-07-20T10:14:34.0688180Z 
+train-and-deploy	Build Docker image	2026-07-20T10:14:34.0688906Z #10 [5/5] COPY model_artifact /app/model
+train-and-deploy	Build Docker image	2026-07-20T10:14:34.0689493Z #10 DONE 0.0s
+train-and-deploy	Build Docker image	2026-07-20T10:14:34.0689722Z 
+train-and-deploy	Build Docker image	2026-07-20T10:14:34.0689896Z #11 exporting to image
+train-and-deploy	Build Docker image	2026-07-20T10:14:38.7107934Z #11 exporting layers
+train-and-deploy	Build Docker image	2026-07-20T10:14:38.7108499Z #11 exporting layers 4.8s done
+train-and-deploy	Build Docker image	2026-07-20T10:14:38.7295318Z #11 writing image sha256:2431e8249800c7cb126ffa221434013987ca7827da5aef6ad6565bc43c426f44 done
+train-and-deploy	Build Docker image	2026-07-20T10:14:38.7297235Z #11 naming to docker.io/***/wine-quality-model:latest done
+train-and-deploy	Build Docker image	2026-07-20T10:14:38.7298204Z #11 DONE 4.8s
+train-and-deploy	Push Docker image to Docker Hub	﻿2026-07-20T10:14:38.7376473Z ##[group]Run docker tag ***/wine-quality-model:latest \
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7376986Z [36;1mdocker tag ***/wine-quality-model:latest \[0m
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7377479Z [36;1m           ***/wine-quality-model:8114761a186dc9b6a76ed8edce94eaffe963ee8f[0m
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7377954Z [36;1mdocker push ***/wine-quality-model:latest[0m
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7378486Z [36;1mdocker push ***/wine-quality-model:8114761a186dc9b6a76ed8edce94eaffe963ee8f[0m
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7378927Z [36;1mecho "✅ Docker image pushed!"[0m
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7379287Z [36;1mecho "Image: ***/wine-quality-model:latest"[0m
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7438856Z shell: /usr/bin/bash -e {0}
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7439127Z env:
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7439524Z   MLFLOW_TRACKING_URI: ***
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7439801Z   MLFLOW_TRACKING_USERNAME: ***
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7440160Z   MLFLOW_TRACKING_PASSWORD: ***
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7440490Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7440940Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.15/x64/lib/pkgconfig
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7441410Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7441798Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7442186Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.15/x64
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7442929Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.15/x64/lib
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7443273Z ##[endgroup]
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.7790362Z The push refers to repository [docker.io/***/wine-quality-model]
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.9967104Z 81b73848f9e6: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.9967751Z 43a1120ebfdf: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.9968413Z 3c1de2147848: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.9968827Z 9ba4269de76c: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.9969212Z 85579ebf440f: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.9969617Z ea06dab957fd: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.9970005Z 6a8e860a2471: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.9970394Z f2ec4de84f55: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.9975580Z ea06dab957fd: Waiting
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.9976054Z 6a8e860a2471: Waiting
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:38.9977020Z f2ec4de84f55: Waiting
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:39.3235582Z 85579ebf440f: Layer already exists
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:39.5393475Z ea06dab957fd: Layer already exists
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:39.7483670Z 6a8e860a2471: Layer already exists
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:39.9654583Z f2ec4de84f55: Layer already exists
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:40.7693836Z 9ba4269de76c: Pushed
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:41.0900601Z 81b73848f9e6: Pushed
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:14:41.6161032Z 3c1de2147848: Pushed
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:13.8811198Z 43a1120ebfdf: Pushed
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:17.6210125Z latest: digest: sha256:b99b3a400842784c0029143d22aec717a52a65f0b602f1a1f3a352524a3027b4 size: 1999
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:17.6348259Z The push refers to repository [docker.io/***/wine-quality-model]
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:17.8478993Z 81b73848f9e6: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:17.8481548Z 43a1120ebfdf: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:17.8482074Z 3c1de2147848: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:17.8482762Z 9ba4269de76c: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:17.8483175Z 85579ebf440f: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:17.8483644Z ea06dab957fd: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:17.8484065Z 6a8e860a2471: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:17.8484506Z f2ec4de84f55: Preparing
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:17.8484955Z ea06dab957fd: Waiting
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:17.8485370Z 6a8e860a2471: Waiting
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:17.8485740Z f2ec4de84f55: Waiting
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:18.1592424Z 85579ebf440f: Layer already exists
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:18.1670479Z 3c1de2147848: Layer already exists
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:18.1737935Z 9ba4269de76c: Layer already exists
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:18.1787947Z 43a1120ebfdf: Layer already exists
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:18.1801441Z 81b73848f9e6: Layer already exists
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:18.3637919Z ea06dab957fd: Layer already exists
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:18.3709671Z 6a8e860a2471: Layer already exists
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:18.3779641Z f2ec4de84f55: Layer already exists
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:20.2695683Z 8114761a186dc9b6a76ed8edce94eaffe963ee8f: digest: sha256:b99b3a400842784c0029143d22aec717a52a65f0b602f1a1f3a352524a3027b4 size: 1999
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:20.2714253Z ✅ Docker image pushed!
+train-and-deploy	Push Docker image to Docker Hub	2026-07-20T10:15:20.2715382Z Image: ***/wine-quality-model:latest
+train-and-deploy	Post Login to Docker Hub	﻿2026-07-20T10:15:20.2781329Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+train-and-deploy	Post Login to Docker Hub	2026-07-20T10:15:20.2782901Z Post job cleanup.
+train-and-deploy	Post Login to Docker Hub	2026-07-20T10:15:20.5892001Z ##[group]Logout from docker.io
+train-and-deploy	Post Login to Docker Hub	2026-07-20T10:15:20.5916491Z (node:3313) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+train-and-deploy	Post Login to Docker Hub	2026-07-20T10:15:20.5918123Z (Use `node --trace-deprecation ...` to show where the warning was created)
+train-and-deploy	Post Login to Docker Hub	2026-07-20T10:15:20.5973091Z [command]/usr/bin/docker logout docker.io
+train-and-deploy	Post Login to Docker Hub	2026-07-20T10:15:20.6151574Z Removing login credentials for docker.io
+train-and-deploy	Post Login to Docker Hub	2026-07-20T10:15:20.6183525Z ##[endgroup]
+train-and-deploy	Post Login to Docker Hub	2026-07-20T10:15:20.6184383Z ##[group]Post cache
+train-and-deploy	Post Login to Docker Hub	2026-07-20T10:15:20.6186033Z State not set
+train-and-deploy	Post Login to Docker Hub	2026-07-20T10:15:20.6186905Z ##[endgroup]
+train-and-deploy	Post Set up Docker Buildx	﻿2026-07-20T10:15:20.6411171Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+train-and-deploy	Post Set up Docker Buildx	2026-07-20T10:15:20.6413584Z Post job cleanup.
+train-and-deploy	Post Set up Docker Buildx	2026-07-20T10:15:20.9048297Z ##[group]Removing builder
+train-and-deploy	Post Set up Docker Buildx	2026-07-20T10:15:20.9056888Z (node:3333) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+train-and-deploy	Post Set up Docker Buildx	2026-07-20T10:15:20.9058253Z (Use `node --trace-deprecation ...` to show where the warning was created)
+train-and-deploy	Post Set up Docker Buildx	2026-07-20T10:15:21.0247731Z [command]/usr/bin/docker buildx rm builder-53a076eb-9dfc-4e32-a025-cb632406b00b
+train-and-deploy	Post Set up Docker Buildx	2026-07-20T10:15:21.1659190Z builder-53a076eb-9dfc-4e32-a025-cb632406b00b removed
+train-and-deploy	Post Set up Docker Buildx	2026-07-20T10:15:21.1698556Z ##[endgroup]
+train-and-deploy	Post Set up Docker Buildx	2026-07-20T10:15:21.1699276Z ##[group]Cleaning up certificates
+train-and-deploy	Post Set up Docker Buildx	2026-07-20T10:15:21.1700719Z ##[endgroup]
+train-and-deploy	Post Set up Docker Buildx	2026-07-20T10:15:21.1701680Z ##[group]Post cache
+train-and-deploy	Post Set up Docker Buildx	2026-07-20T10:15:21.1713450Z State not set
+train-and-deploy	Post Set up Docker Buildx	2026-07-20T10:15:21.1714124Z ##[endgroup]
+train-and-deploy	Post Set up Python 3.10.15	﻿2026-07-20T10:15:21.1891084Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+train-and-deploy	Post Set up Python 3.10.15	2026-07-20T10:15:21.1893687Z Post job cleanup.
+train-and-deploy	Post Set up Python 3.10.15	2026-07-20T10:15:21.3290155Z (node:3471) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+train-and-deploy	Post Set up Python 3.10.15	2026-07-20T10:15:21.3291457Z (Use `node --trace-deprecation ...` to show where the warning was created)
+train-and-deploy	Post Checkout repository	﻿2026-07-20T10:15:21.3475752Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+train-and-deploy	Post Checkout repository	2026-07-20T10:15:21.3477890Z Post job cleanup.
+train-and-deploy	Post Checkout repository	2026-07-20T10:15:21.4360134Z [command]/usr/bin/git version
+train-and-deploy	Post Checkout repository	2026-07-20T10:15:21.4404550Z git version 2.54.0
+train-and-deploy	Post Checkout repository	2026-07-20T10:15:21.4476960Z Temporarily overriding HOME='/home/runner/work/_temp/ca983dc4-b1a0-4955-9853-d9e637b8c052' before making global git config changes
+train-and-deploy	Post Checkout repository	2026-07-20T10:15:21.4478524Z Adding repository directory to the temporary git global config as a safe directory
+train-and-deploy	Post Checkout repository	2026-07-20T10:15:21.4483355Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Workflow-CI/Workflow-CI
+train-and-deploy	Post Checkout repository	2026-07-20T10:15:21.4524416Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+train-and-deploy	Post Checkout repository	2026-07-20T10:15:21.4561629Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+train-and-deploy	Post Checkout repository	2026-07-20T10:15:21.4819467Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+train-and-deploy	Post Checkout repository	2026-07-20T10:15:21.4849695Z http.https://github.com/.extraheader
+train-and-deploy	Post Checkout repository	2026-07-20T10:15:21.4861928Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+train-and-deploy	Post Checkout repository	2026-07-20T10:15:21.4897711Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+train-and-deploy	Post Checkout repository	2026-07-20T10:15:21.5176220Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+train-and-deploy	Post Checkout repository	2026-07-20T10:15:21.5216088Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+train-and-deploy	Complete job	﻿2026-07-20T10:15:21.5616344Z Cleaning up orphan processes
+train-and-deploy	Complete job	2026-07-20T10:15:21.5926370Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, docker/login-action@v3, docker/setup-buildx-action@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
