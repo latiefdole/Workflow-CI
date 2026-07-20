@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  model:
+    image: latiefdole/wine-quality-model:latest
+    ports:
+      - "8080:8080"
+    networks:
+      - monitor_net
+
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    networks:
+      - monitor_net
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    networks:
+      - monitor_net
+
+networks:
+  monitor_net:
+    driver: bridge
