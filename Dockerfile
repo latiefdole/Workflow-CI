@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir \
     mlserver-mlflow
 
 # Copy model yang sudah di-download oleh CI
-COPY model_artifact /app/model
+COPY model_artifact/model /app/model
 
 # Expose port
 EXPOSE 8080
