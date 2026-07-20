@@ -51,7 +51,8 @@ jobs:
           mlflow models build-docker \
             -m "runs:/${{ steps.get_run_id.outputs.run_id }}/model" \
             -n "${{ secrets.DOCKER_USERNAME }}/wine-quality-model" \
-            --enable-mlserver
+            --enable-mlserver \
+            --env-manager conda
 
       - name: Push Docker image to Docker Hub
         run: |
