@@ -5,6 +5,7 @@ services:
     image: latiefdole/wine-quality-model:latest
     ports:
       - "8080:8080"
+      - "8082:8082"
     networks:
       - monitor_net
 
