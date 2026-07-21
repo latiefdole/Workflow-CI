@@ -12,7 +12,7 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 from sklearn.model_selection import cross_val_score
 
 # ── Load Data ─────────────────────────────────────────────────────────────────
-PREP = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'wine_quality_preprocessing')
+PREP = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'maternal_health_preprocessing')
 
 X_train = pd.read_csv(f'{PREP}/X_train.csv').values
 X_test  = pd.read_csv(f'{PREP}/X_test.csv').values

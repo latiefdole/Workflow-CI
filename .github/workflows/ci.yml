@@ -17,10 +17,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python 3.10.15
+      - name: Set up Python 3.12.7
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10.15'
+          python-version: '3.12.7'
 
       - name: Install dependencies
         run: |
@@ -49,13 +49,13 @@ jobs:
       - name: Build Docker image
         run: |
           mlflow artifacts download -u "runs:/${{ steps.get_run_id.outputs.run_id }}/model" -d ./model_artifact
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/wine-quality-model:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/maternal-health-model:latest .
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker tag ${{ secrets.DOCKER_USERNAME }}/wine-quality-model:latest \
-                     ${{ secrets.DOCKER_USERNAME }}/wine-quality-model:${{ github.sha }}
-          docker push ${{ secrets.DOCKER_USERNAME }}/wine-quality-model:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/wine-quality-model:${{ github.sha }}
+          docker tag ${{ secrets.DOCKER_USERNAME }}/maternal-health-model:latest \
+                     ${{ secrets.DOCKER_USERNAME }}/maternal-health-model:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/maternal-health-model:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/maternal-health-model:${{ github.sha }}
           echo "✅ Docker image pushed!"
-          echo "Image: ${{ secrets.DOCKER_USERNAME }}/wine-quality-model:latest"
+          echo "Image: ${{ secrets.DOCKER_USERNAME }}/maternal-health-model:latest"

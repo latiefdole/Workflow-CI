@@ -1,4 +1,4 @@
-name: wine_quality_model
+name: maternal_health_model
 conda_env: conda.yaml
 
 entry_points:
