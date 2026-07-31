@@ -17,7 +17,7 @@ Workflow-CI/
     ├── MLProject                # Konfigurasi MLflow Project
     ├── conda.yaml               # Environment dependencies
     ├── modelling.py             # Script training model
-    ├── wine_quality_preprocessing/   # Dataset preprocessed
+    ├── maternal_health_preprocessing/   # Dataset preprocessed
     └── docker_image_link.txt    # Link Docker Hub image
 ```
 
@@ -41,6 +41,6 @@ mlflow run MLProject/ --env-manager local
 ## 🐳 Docker Image
 
 ```bash
-docker pull latiefdole/wine-quality-model:latest
-docker run -p 5001:8080 latiefdole/wine-quality-model:latest
+docker pull latiefdole/maternal-health-model:latest
+docker run -p 5001:8080 latiefdole/maternal-health-model:latest
 ```
