@@ -22,6 +22,7 @@ y_test  = pd.read_csv(f'{PREP}/y_test.csv').squeeze().values
 print(f"Data loaded — Train: {X_train.shape}, Test: {X_test.shape}")
 
 # ── Training ──────────────────────────────────────────────────────────────────
+mlflow.sklearn.autolog()
 with mlflow.start_run(run_name='RF_CI_run') as run:
     # Save run ID to file for CI
     output_path = os.path.join(os.environ.get('GITHUB_WORKSPACE', '.'), 'run_id.txt')
